@@ -4,6 +4,21 @@ Best approach: Simple, stable, and proven to work!
 
 Conditions: Sex, Age, BMI
 Resolution: 64x64 or 128x128 (configurable)
+
+SETUP INSTRUCTIONS:
+-------------------
+For detailed setup instructions, see: final_pipeline/README.md
+Quick guide: final_pipeline/SETUP_GUIDE.md
+
+DATASET REQUIREMENTS:
+---------------------
+- Manifest CSV file with columns: processed_path, sex, age_bin, weight, height
+- Processed videos: MP4 format, 128x128, grayscale, 30fps
+- Default manifest path: data/processed_full/manifest_full.csv
+
+USAGE:
+------
+python final_pipeline/train_c3dgan.py --manifest path/to/manifest.csv
 """
 import os
 import argparse
@@ -461,7 +476,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train C3D-GAN for video generation")
     
     # Data
-    parser.add_argument("--manifest", type=str, default="data/processed_full/manifest_full.csv")
+    parser.add_argument(
+        "--manifest", 
+        type=str, 
+        default="data/processed_full/manifest_full.csv",
+        help="Path to manifest CSV file. Must have columns: processed_path, sex, age_bin, weight, height. See final_pipeline/README.md for format details."
+    )
     parser.add_argument("--size", type=int, default=128, choices=[32, 64, 128])
     
     # Training

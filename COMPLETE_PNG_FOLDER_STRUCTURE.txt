@@ -1,0 +1,230 @@
+COMPLETE PNG FOLDER AND FILE STRUCTURE
+=======================================
+
+paper_gradcam_collection/
+│
+├── cardiac_specific/                          [9 PNG files - EF Model Grad-CAM]
+│   ├── sample_0000/
+│   │   ├── cardiac_age_variation.png
+│   │   ├── cardiac_bmi_variation.png
+│   │   └── cardiac_sex_variation.png
+│   ├── sample_0001/
+│   │   ├── cardiac_age_variation.png
+│   │   ├── cardiac_bmi_variation.png
+│   │   └── cardiac_sex_variation.png
+│   └── sample_0002/
+│       ├── cardiac_age_variation.png
+│       ├── cardiac_bmi_variation.png
+│       └── cardiac_sex_variation.png
+│
+├── demographic_categories/                    [18 PNG files]
+│   ├── heatmaps/
+│   │   ├── early_heatmap.png
+│   │   ├── middle_heatmap.png
+│   │   ├── normal_heatmap.png
+│   │   ├── overweight_heatmap.png
+│   │   └── underweight_heatmap.png
+│   └── overlays/
+│       ├── early_frame.png
+│       ├── early_heatmap.png
+│       ├── early.png
+│       ├── middle_frame.png
+│       ├── middle_heatmap.png
+│       ├── middle.png
+│       ├── normal_frame.png
+│       ├── normal_heatmap.png
+│       ├── normal.png
+│       ├── overweight_frame.png
+│       ├── overweight_heatmap.png
+│       ├── overweight.png
+│       ├── underweight_frame.png
+│       ├── underweight_heatmap.png
+│       └── underweight.png
+│
+├── demographic_specific/                      [9 PNG files - Generator Demographic Grad-CAM]
+│   ├── sample_0000/
+│   │   ├── demographic_age_variation.png
+│   │   ├── demographic_bmi_variation.png
+│   │   └── demographic_sex_variation.png
+│   ├── sample_0001/
+│   │   ├── demographic_age_variation.png
+│   │   ├── demographic_bmi_variation.png
+│   │   └── demographic_sex_variation.png
+│   └── sample_0002/
+│       ├── demographic_age_variation.png
+│       ├── demographic_bmi_variation.png
+│       └── demographic_sex_variation.png
+│
+├── demographic_variations/                    [45 PNG files - Original Collection]
+│   ├── heatmaps/
+│   │   ├── sample_0000_age_variation_heatmap.png
+│   │   ├── sample_0000_bmi_variation_heatmap.png
+│   │   ├── sample_0000_real_heatmap.png
+│   │   ├── sample_0000_sex_variation_heatmap.png
+│   │   ├── sample_0001_age_variation_heatmap.png
+│   │   ├── sample_0001_bmi_variation_heatmap.png
+│   │   ├── sample_0001_real_heatmap.png
+│   │   ├── sample_0001_sex_variation_heatmap.png
+│   │   ├── sample_0002_age_variation_heatmap.png
+│   │   ├── sample_0002_bmi_variation_heatmap.png
+│   │   ├── sample_0002_real_heatmap.png
+│   │   ├── sample_0002_sex_variation_heatmap.png
+│   │   ├── sample_0003_age_variation_heatmap.png
+│   │   ├── sample_0003_bmi_variation_heatmap.png
+│   │   ├── sample_0003_real_heatmap.png
+│   │   ├── sample_0003_sex_variation_heatmap.png
+│   │   ├── sample_0004_age_variation_heatmap.png
+│   │   ├── sample_0004_bmi_variation_heatmap.png
+│   │   ├── sample_0004_real_heatmap.png
+│   │   └── sample_0004_sex_variation_heatmap.png
+│   ├── overlays/
+│   │   ├── sample_0000_age_variation_overlay.png
+│   │   ├── sample_0000_bmi_variation_overlay.png
+│   │   ├── sample_0000_real_overlay.png
+│   │   ├── sample_0000_sex_variation_overlay.png
+│   │   ├── sample_0001_age_variation_overlay.png
+│   │   ├── sample_0001_bmi_variation_overlay.png
+│   │   ├── sample_0001_real_overlay.png
+│   │   ├── sample_0001_sex_variation_overlay.png
+│   │   ├── sample_0002_age_variation_overlay.png
+│   │   ├── sample_0002_bmi_variation_overlay.png
+│   │   ├── sample_0002_real_overlay.png
+│   │   ├── sample_0002_sex_variation_overlay.png
+│   │   ├── sample_0003_age_variation_overlay.png
+│   │   ├── sample_0003_bmi_variation_overlay.png
+│   │   ├── sample_0003_real_overlay.png
+│   │   ├── sample_0003_sex_variation_overlay.png
+│   │   ├── sample_0004_age_variation_overlay.png
+│   │   ├── sample_0004_bmi_variation_overlay.png
+│   │   ├── sample_0004_real_overlay.png
+│   │   └── sample_0004_sex_variation_overlay.png
+│   ├── sample_0000_variations.png
+│   ├── sample_0001_variations.png
+│   ├── sample_0002_variations.png
+│   ├── sample_0003_variations.png
+│   └── sample_0004_variations.png
+│
+├── fixed_variations/                          [3 PNG files]
+│   ├── gradcam_comparison_fixed_age_variation.png
+│   ├── gradcam_comparison_fixed_bmi_variation.png
+│   └── gradcam_comparison_fixed_sex_variation.png
+│
+├── fixed_variations_correct/                  [9 PNG files - Generator Encoder Grad-CAM]
+│   ├── sample_0000/
+│   │   ├── correct_age_variation.png
+│   │   ├── correct_bmi_variation.png
+│   │   └── correct_sex_variation.png
+│   ├── sample_0001/
+│   │   ├── correct_age_variation.png
+│   │   ├── correct_bmi_variation.png
+│   │   └── correct_sex_variation.png
+│   └── sample_0002/
+│       ├── correct_age_variation.png
+│       ├── correct_bmi_variation.png
+│       └── correct_sex_variation.png
+│
+├── subgroup_analysis/                        [7 PNG files]
+│   ├── demographic_gradcam_grid.png
+│   ├── miccai_8_conditions_exact.png
+│   ├── miccai_demographic_gradcam_extended.png
+│   ├── miccai_demographic_gradcam.png
+│   ├── miccai_exact_style_gradcam.png
+│   ├── miccai_representative_samples.png
+│   └── sex_subgroup_gradcam.png
+│
+└── videos/                                    [Video files - not PNG]
+    ├── demographic_variations/
+    │   ├── originals/
+    │   └── variations/
+    └── perfect_reconstruction/
+        └── originals/
+
+
+use_case_3_perfect_reconstruction/
+│
+├── best_gradcam_results/                      [47 PNG files]
+│   └── perfect_copies/
+│       ├── sample_0092_comparison.png
+│       ├── sample_0093_comparison.png
+│       ├── sample_0094_comparison.png
+│       ├── sample_0095_comparison.png
+│       ├── sample_0098_comparison.png
+│       ├── sample_0230_comparison.png
+│       ├── sample_0230_real_frame.png
+│       ├── sample_0230_real_heatmap.png
+│       ├── sample_0230_real_overlay.png
+│       ├── sample_0230_synthetic_frame.png
+│       ├── sample_0230_synthetic_heatmap.png
+│       ├── sample_0230_synthetic_overlay.png
+│       ├── sample_0241_comparison.png
+│       ├── sample_0241_real_frame.png
+│       ├── sample_0241_real_heatmap.png
+│       ├── sample_0241_real_overlay.png
+│       ├── sample_0241_synthetic_frame.png
+│       ├── sample_0241_synthetic_heatmap.png
+│       ├── sample_0241_synthetic_overlay.png
+│       ├── sample_1120_comparison.png
+│       ├── sample_1120_real_frame.png
+│       ├── sample_1120_real_heatmap.png
+│       ├── sample_1120_real_overlay.png
+│       ├── sample_1120_synthetic_frame.png
+│       ├── sample_1120_synthetic_heatmap.png
+│       ├── sample_1120_synthetic_overlay.png
+│       ├── sample_2174_real_frame.png
+│       ├── sample_2174_real_heatmap.png
+│       ├── sample_2174_real_overlay.png
+│       ├── sample_2174_synthetic_frame.png
+│       ├── sample_2174_synthetic_heatmap.png
+│       ├── sample_2174_synthetic_overlay.png
+│       ├── sample_4656_real_frame.png
+│       ├── sample_4656_real_heatmap.png
+│       ├── sample_4656_real_overlay.png
+│       ├── sample_4656_synthetic_frame.png
+│       ├── sample_4656_synthetic_heatmap.png
+│       ├── sample_4656_synthetic_overlay.png
+│       ├── sample_6011_real_frame.png
+│       ├── sample_6011_real_heatmap.png
+│       ├── sample_6011_real_overlay.png
+│       ├── sample_6011_synthetic_frame.png
+│       ├── sample_6011_synthetic_heatmap.png
+│       ├── sample_6011_synthetic_overlay.png
+│       ├── sample_7581_comparison.png
+│       ├── sample_7581_real_frame.png
+│       ├── sample_7581_real_heatmap.png
+│       ├── sample_7581_real_overlay.png
+│       ├── sample_7581_synthetic_frame.png
+│       ├── sample_7581_synthetic_heatmap.png
+│       └── sample_7581_synthetic_overlay.png
+│
+└── best_gradcam_visualizations/              [5 PNG files - Best Perfect Reconstruction]
+    └── perfect_reconstruction/
+        ├── best_perfect_reconstruction_sample_0000.png
+        ├── best_perfect_reconstruction_sample_1947.png
+        ├── best_perfect_reconstruction_sample_3895.png
+        ├── best_perfect_reconstruction_sample_5842.png
+        └── best_perfect_reconstruction_sample_7790.png
+
+
+TOTAL PNG FILES SUMMARY
+=======================
+
+paper_gradcam_collection/:                    102 PNG files
+  - cardiac_specific/:                         9 files
+  - demographic_categories/:                  18 files
+  - demographic_specific/:                     9 files
+  - demographic_variations/:                  45 files
+  - fixed_variations/:                         3 files
+  - fixed_variations_correct/:                9 files
+  - subgroup_analysis/:                        7 files
+
+use_case_3_perfect_reconstruction/:           52 PNG files
+  - best_gradcam_results/:                   47 files
+  - best_gradcam_visualizations/:             5 files
+
+GRAND TOTAL:                                  154 PNG files
+
+
+FULL FILE PATHS (SORTED)
+========================
+
+[All 154 PNG files with complete paths listed above in folder structure]

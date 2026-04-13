@@ -1,0 +1,6 @@
+Dataset,Train Samples,Val Samples,N Classes,Best Val Accuracy
+Real-Only-Baseline,16,4,2,100.00%
+Augmented-Traditional,64,16,2,75.00%
+Mixed-20pct,20,5,2,100.00%
+Mixed-25pct,20,6,2,100.00%
+Mixed-30pct,20,6,2,100.00%

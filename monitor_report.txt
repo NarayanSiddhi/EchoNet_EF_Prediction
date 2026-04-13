@@ -1,0 +1,814 @@
+[2026-04-09 13:44:54] Smart monitor started
+[2026-04-09 13:45:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:46:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:47:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:48:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:49:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:50:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:51:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:52:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:53:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:54:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:55:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:56:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:57:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:58:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 13:59:54] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:00:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:01:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:02:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:03:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:04:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:05:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:06:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:07:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:08:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:09:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:10:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:11:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:12:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:13:55] Epoch 2: L1=0.01378  drop=46.3%  — OK
+[2026-04-09 14:14:55] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:15:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:16:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:17:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:18:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:19:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:20:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:21:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:22:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:23:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:24:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:25:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:26:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:27:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:28:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:29:56] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:30:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:31:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:32:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:33:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:34:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:35:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:36:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:37:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:38:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:39:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:40:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:41:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:42:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:43:57] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:44:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:45:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:46:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:47:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:48:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:49:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:50:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:51:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:52:58] Epoch 3: L1=0.01183  drop=14.2%  — OK
+[2026-04-09 14:53:58] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 14:54:58] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 14:55:58] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 14:56:58] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 14:57:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 14:58:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 14:59:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:00:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:01:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:02:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:03:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:04:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:05:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:06:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:07:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:08:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:09:59] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:11:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:12:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:13:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:14:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:15:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:16:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:17:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:18:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:19:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:20:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:21:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:22:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:23:00] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:24:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:25:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:26:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:27:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:28:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:29:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:30:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:31:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:32:01] Epoch 4: L1=0.00964  drop=18.5%  — OK
+[2026-04-09 15:33:01] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:34:01] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:35:01] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:36:01] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:37:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:38:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:39:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:40:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:41:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:42:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:43:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:44:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:45:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:46:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:47:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:48:02] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:49:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:50:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:51:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:52:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:53:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:54:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:55:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:56:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:57:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:58:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 15:59:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:00:03] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:01:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:02:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:03:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:04:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:05:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:06:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:07:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:08:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:09:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:10:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:11:04] Epoch 5: L1=0.00834  drop=13.5%  — OK
+[2026-04-09 16:12:04] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:13:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:14:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:15:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:16:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:17:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:18:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:19:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:20:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:21:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:22:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:23:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:24:05] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:25:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:26:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:27:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:28:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:29:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:30:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:31:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:32:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:33:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:34:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:35:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:36:06] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:37:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:38:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:39:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:40:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:41:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:42:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:43:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:44:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:45:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:46:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:47:07] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:48:08] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:49:08] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:50:08] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:51:08] Epoch 6: L1=0.00782  drop=6.2%  — OK
+[2026-04-09 16:52:08] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 16:53:08] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 16:54:08] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 16:55:08] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 16:56:08] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 16:57:08] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 16:58:08] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 16:59:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:00:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:01:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:02:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:03:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:04:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:05:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:06:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:07:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:08:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:09:09] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:10:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:11:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:12:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:13:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:14:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:15:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:16:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:17:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:18:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:19:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:20:10] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:21:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:22:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:23:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:24:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:25:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:26:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:27:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:28:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:29:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:30:11] Epoch 7: L1=0.00725  drop=7.3%  — OK
+[2026-04-09 17:31:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:31:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:31:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:32:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:32:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:32:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:33:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:33:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:33:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:34:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:34:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:34:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:35:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:35:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:35:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:36:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:36:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:36:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:37:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:37:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:37:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:38:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:38:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:38:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:39:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:39:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:39:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:40:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:40:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:40:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:41:12] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:41:12] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:41:12] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:42:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:42:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:42:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:43:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:43:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:43:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:44:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:44:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:44:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:45:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:45:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:45:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:46:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:46:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:46:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:47:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:47:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:47:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:48:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:48:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:48:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:49:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:49:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:49:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:50:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:50:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:50:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:51:13] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:51:13] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:51:13] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:52:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:52:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:52:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:53:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:53:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:53:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:54:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:54:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:54:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:55:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:55:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:55:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:56:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:56:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:56:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:57:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:57:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:57:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:58:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:58:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:58:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 17:59:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 17:59:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 17:59:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:00:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:00:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:00:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:01:14] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:01:14] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:01:14] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:02:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:02:15] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:02:15] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:03:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:03:15] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:03:15] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:04:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:04:15] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:04:15] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:05:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:05:15] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:05:15] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:06:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:06:15] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:06:15] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:07:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:07:15] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:07:15] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:08:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:08:15] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:08:15] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:09:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00782', '0.00725', '0.00636']). Drops: ['0.00057', '0.00089'].
+[2026-04-09 18:09:15] Loss=0.00636 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:09:15] Epoch 8: L1=0.00636  drop=12.3%  — OK
+[2026-04-09 18:10:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:10:15] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:10:15] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:11:15] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:11:15] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:11:15] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:12:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:12:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:12:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:13:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:13:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:13:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:14:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:14:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:14:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:15:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:15:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:15:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:16:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:16:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:16:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:17:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:17:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:17:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:18:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:18:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:18:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:19:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:19:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:19:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:20:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:20:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:20:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:21:16] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:21:16] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:21:16] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:22:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:22:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:22:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:23:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:23:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:23:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:24:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:24:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:24:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:25:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:25:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:25:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:26:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:26:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:26:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:27:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:27:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:27:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:28:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:28:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:28:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:29:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:29:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:29:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:30:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:30:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:30:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:31:17] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:31:17] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:31:17] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:32:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:32:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:32:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:33:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:33:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:33:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:34:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:34:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:34:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:35:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:35:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:35:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:36:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:36:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:36:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:37:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:37:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:37:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:38:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:38:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:38:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:39:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:39:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:39:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:40:18] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:40:18] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:40:18] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:41:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:41:19] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:41:19] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:42:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:42:19] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:42:19] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:43:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:43:19] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:43:19] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:44:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:44:19] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:44:19] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:45:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:45:19] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:45:19] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:46:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:46:19] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:46:19] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:47:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:47:19] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:47:19] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:48:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00725', '0.00636', '0.00628']). Drops: ['0.00089', '0.00008'].
+[2026-04-09 18:48:19] Loss=0.00628 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:48:19] Epoch 9: L1=0.00628  drop=1.3%  — OK
+[2026-04-09 18:49:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:49:19] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:49:19] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:50:19] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:50:19] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:50:19] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:51:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:51:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:51:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:52:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:52:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:52:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:53:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:53:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:53:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:54:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:54:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:54:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:55:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:55:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:55:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:56:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:56:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:56:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:57:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:57:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:57:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:58:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:58:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:58:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 18:59:20] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 18:59:20] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 18:59:20] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:00:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:00:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:00:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:01:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:01:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:01:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:02:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:02:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:02:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:03:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:03:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:03:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:04:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:04:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:04:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:05:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:05:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:05:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:06:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:06:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:06:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:07:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:07:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:07:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:08:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:08:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:08:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:09:21] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:09:21] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:09:21] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:10:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:10:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:10:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:11:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:11:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:11:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:12:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:12:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:12:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:13:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:13:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:13:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:14:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:14:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:14:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:15:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:15:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:15:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:16:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:16:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:16:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:17:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:17:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:17:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:18:22] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:18:22] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:18:22] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:19:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:19:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:19:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:20:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:20:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:20:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:21:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:21:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:21:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:22:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:22:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:22:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:23:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:23:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:23:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:24:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:24:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:24:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:25:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:25:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:25:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:26:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:26:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:26:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:27:23] ⚠️  PLATEAU detected (last 3 epochs: ['0.00636', '0.00628', '0.00576']). Drops: ['0.00008', '0.00052'].
+[2026-04-09 19:27:23] Loss=0.00576 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:27:23] Epoch 10: L1=0.00576  drop=8.3%  — OK
+[2026-04-09 19:28:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:28:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:28:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:29:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:29:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:29:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:30:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:30:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:30:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:31:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:31:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:31:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:32:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:32:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:32:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:33:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:33:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:33:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:34:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:34:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:34:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:35:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:35:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:35:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:36:24] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:36:24] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:36:24] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:37:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:37:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:37:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:38:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:38:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:38:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:39:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:39:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:39:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:40:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:40:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:40:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:41:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:41:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:41:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:42:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:42:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:42:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:43:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:43:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:43:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:44:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:44:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:44:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:45:25] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:45:25] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:45:25] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:46:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:46:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:46:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:47:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:47:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:47:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:48:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:48:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:48:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:49:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:49:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:49:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:50:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:50:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:50:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:51:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:51:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:51:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:52:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:52:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:52:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:53:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:53:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:53:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:54:26] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:54:26] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:54:26] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:55:27] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:55:27] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:55:27] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:56:27] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:56:27] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:56:27] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:57:27] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:57:27] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:57:27] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:58:27] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:58:27] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:58:27] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 19:59:27] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 19:59:27] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 19:59:27] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 20:00:27] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 20:00:27] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:00:27] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 20:01:27] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 20:01:27] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:01:27] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 20:02:27] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 20:02:27] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:02:27] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 20:03:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 20:03:28] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:03:28] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 20:04:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 20:04:28] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:04:28] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 20:05:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 20:05:28] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:05:28] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 20:06:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00628', '0.00576', '0.00526']). Drops: ['0.00052', '0.00050'].
+[2026-04-09 20:06:28] Loss=0.00526 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:06:28] Epoch 11: L1=0.00526  drop=8.7%  — OK
+[2026-04-09 20:07:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:07:28] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:07:28] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:08:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:08:28] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:08:28] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:09:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:09:28] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:09:28] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:10:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:10:28] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:10:28] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:11:28] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:11:28] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:11:28] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:12:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:12:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:12:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:13:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:13:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:13:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:14:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:14:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:14:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:15:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:15:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:15:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:16:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:16:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:16:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:17:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:17:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:17:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:18:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:18:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:18:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:19:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:19:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:19:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:20:29] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:20:29] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:20:29] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:21:30] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:21:30] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:21:30] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:22:30] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:22:30] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:22:30] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:23:30] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:23:30] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:23:30] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:24:30] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:24:30] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:24:30] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:25:30] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:25:30] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:25:30] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:26:30] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:26:30] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:26:30] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:27:30] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:27:30] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:27:30] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:28:30] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:28:30] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:28:30] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:29:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:29:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:29:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:30:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:30:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:30:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:31:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:31:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:31:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:32:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:32:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:32:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:33:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:33:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:33:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:34:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:34:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:34:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:35:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:35:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:35:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:36:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:36:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:36:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:37:31] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:37:31] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:37:31] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:38:32] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:38:32] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:38:32] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:39:32] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:39:32] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:39:32] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:40:32] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:40:32] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:40:32] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:41:32] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:41:32] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:41:32] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:42:32] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:42:32] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:42:32] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:43:32] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:43:32] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:43:32] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:44:32] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:44:32] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:44:32] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:45:32] ⚠️  PLATEAU detected (last 3 epochs: ['0.00576', '0.00526', '0.00513']). Drops: ['0.00050', '0.00013'].
+[2026-04-09 20:45:32] Loss=0.00513 — plateau is acceptable (low enough). Continuing.
+[2026-04-09 20:45:32] Epoch 12: L1=0.00513  drop=2.5%  — OK
+[2026-04-09 20:46:33] ✅ Early stop: L1=0.00488 < 0.005 — model converged!
+[2026-04-09 20:46:33] Training is finished early. Proceed to Step 2 (UC2 generation).
+[2026-04-09 20:46:33] Monitor exiting.

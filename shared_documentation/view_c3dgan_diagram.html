@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C3D-GAN Architecture Flow Diagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .diagram-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 100%;
+            overflow: auto;
+        }
+        .diagram-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4f8;
+            border-radius: 5px;
+            max-width: 1200px;
+        }
+        .info h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .info ul {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>C3D-GAN Architecture Flow Diagram</h1>
+    
+    <div class="diagram-container">
+        <img src="c3dgan_architecture_flow_diagram.png" alt="C3D-GAN Architecture Flow Diagram">
+    </div>
+    
+    <div class="info">
+        <h2>Diagram Components</h2>
+        <ul>
+            <li><strong>Embedding Layers (Left):</strong> Video input → 3D Encoder → H_V^0, Demographics → Embedding → H_D^0</li>
+            <li><strong>Generator Core (Middle):</strong> Encoder-Decoder with demographic fusion, residual blocks, skip connections</li>
+            <li><strong>Output Layer (Right):</strong> Synthetic video generation</li>
+            <li><strong>Discriminator (Bottom):</strong> PatchGAN 3D for adversarial training</li>
+            <li><strong>Loss Functions (Right):</strong> Pixel (100), SSIM (5), Temporal (10), GAN (1), Demo (5)</li>
+            <li><strong>Use Cases (Top Right):</strong> 
+                <ul>
+                    <li>Use Case 1: Data Imbalance - 1 Real → 3 Synthetic</li>
+                    <li>Use Case 2: EF Prediction - 1 Real → 1 Synthetic</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p><strong>File formats available:</strong></p>
+        <ul>
+            <li>PNG: c3dgan_architecture_flow_diagram.png (300 DPI, publication-ready)</li>
+            <li>PDF: c3dgan_architecture_flow_diagram.pdf (vector format)</li>
+        </ul>
+    </div>
+</body>
+</html>

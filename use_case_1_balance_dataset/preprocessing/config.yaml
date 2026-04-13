@@ -1,0 +1,32 @@
+# Preprocessing configuration
+subset:
+  total_samples: 2000
+  views:
+    - A4C
+    - PSAX
+  balance_by:
+    - sex
+    - age_bin
+  age_bins:
+    - { name: "0-1", min: 0, max: 1 }
+    - { name: "2-5", min: 2, max: 5 }
+    - { name: "6-10", min: 6, max: 10 }
+    - { name: "11-15", min: 11, max: 15 }
+    - { name: "16-18", min: 16, max: 18 }
+
+paths:
+  dataset_root: "Dataset/azcopy_darwin_amd64_10.30.1/EchoNet-Pediatric/echonetpediatric/pediatric_echo_avi/pediatric_echo_avi"
+  output_dir: "data/processed"
+  manifest_filename: "manifest.csv"
+
+processing:
+  do_process: true
+  output_videos_dir: "data/processed/videos"
+  # Echo clips: must match train_c3dgan.py --size and UC2/UC3 --video_size (use 256 for highest-res Step 1)
+  width: 128
+  height: 128
+  target_fps: 30
+  max_frames: 96
+  grayscale: true
+
+random_seed: 42

@@ -1,0 +1,70 @@
+1-2 WORD CAPTIONS FOR SYNTHETIC VIDEO FRAME IMAGES
+==================================================
+
+DEMOGRAPHIC VARIATIONS (Fixed v2):
+----------------------------------
+video_0000_var1_age_variation_grid.png     → "Age Variant"
+video_0000_var2_sex_variation_grid.png     → "Sex Variant"
+video_0000_var3_bmi_variation_grid.png     → "BMI Variant"
+video_0001_var1_age_variation_grid.png     → "Age Variant"
+video_0001_var2_sex_variation_grid.png     → "Sex Variant"
+video_0001_var3_bmi_variation_grid.png     → "BMI Variant"
+video_0002_var1_age_variation_grid.png     → "Age Variant"
+video_0002_var2_sex_variation_grid.png     → "Sex Variant"
+video_0002_var3_bmi_variation_grid.png     → "BMI Variant"
+
+PERFECT RECONSTRUCTION:
+-----------------------
+perfect_copy_0000_grid.png                 → "Perfect Copy"
+perfect_copy_0001_grid.png                 → "Perfect Copy"
+perfect_copy_0002_grid.png                 → "Perfect Copy"
+perfect_copy_0003_grid.png                 → "Perfect Copy"
+perfect_copy_0004_grid.png                 → "Perfect Copy"
+
+PAPER COLLECTION - ORIGINALS:
+------------------------------
+sample_0000_original_grid.png              → "Original Video"
+sample_0001_original_grid.png              → "Original Video"
+sample_0002_original_grid.png              → "Original Video"
+sample_0003_original_grid.png              → "Original Video"
+sample_0004_original_grid.png              → "Original Video"
+
+PAPER COLLECTION - VARIATIONS:
+-------------------------------
+video_0000_var1_age_variation_grid.png     → "Age Variant"
+video_0000_var2_sex_variation_grid.png     → "Sex Variant"
+video_0000_var3_bmi_variation_grid.png     → "BMI Variant"
+video_0001_var1_age_variation_grid.png     → "Age Variant"
+video_0001_var2_sex_variation_grid.png     → "Sex Variant"
+video_0001_var3_bmi_variation_grid.png     → "BMI Variant"
+video_0002_var1_age_variation_grid.png     → "Age Variant"
+video_0002_var2_sex_variation_grid.png     → "Sex Variant"
+video_0002_var3_bmi_variation_grid.png     → "BMI Variant"
+
+
+ALTERNATIVE CAPTIONS (if you prefer different wording):
+=======================================================
+
+Demographic Variations:
+- "Age Change" / "Age Shift" / "Age Modified"
+- "Sex Change" / "Sex Shift" / "Sex Modified"
+- "BMI Change" / "BMI Shift" / "BMI Modified"
+
+Perfect Reconstruction:
+- "Exact Copy" / "Perfect Match" / "Synthetic Copy"
+
+Originals:
+- "Real Video" / "Source Video" / "Ground Truth"
+
+Variations:
+- "Synthetic Variant" / "Generated Video" / "Augmented Video"
+
+
+SHORTEST OPTIONS (1 word):
+==========================
+Age Variation    → "Age"
+Sex Variation    → "Sex"
+BMI Variation    → "BMI"
+Perfect Copy     → "Copy"
+Original         → "Original"
+Variation        → "Variant"

@@ -1,0 +1,5 @@
+Dataset,Mean Discriminator Prob,Std,Min,Max,Videos Evaluated
+Real-Only,0.000,0.000,0.000,0.000,20
+20% Synthetic,0.000,0.000,0.000,0.000,25
+25% Synthetic,0.000,0.000,0.000,0.000,26
+30% Synthetic,0.000,0.000,0.000,0.000,26

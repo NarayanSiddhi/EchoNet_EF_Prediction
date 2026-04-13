@@ -1,0 +1,5 @@
+Dataset,Train Samples,Val Samples,N Classes,Best Val Accuracy
+Real-Only,16,4,1,100.00%
+20% Synthetic,20,5,1,100.00%
+25% Synthetic,20,6,1,100.00%
+30% Synthetic,20,6,1,100.00%

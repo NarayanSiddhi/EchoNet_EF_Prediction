@@ -1,0 +1,73 @@
+
+======================================================================
+Temporal Coverage Analysis: 32 frames @ 30 fps
+======================================================================
+Clip duration: 1.067 seconds
+
+Heart Rate Scenario                 HR (bpm)     Cycle (s)    Cycles      
+----------------------------------------------------------------------
+Resting adult (reference)           60           1.000        1.07        
+Pediatric lower bound               60           1.000        1.07        
+Typical pediatric resting           80           0.750        1.42        
+Pediatric upper normal              100          0.600        1.78        
+Pediatric tachycardia threshold     120          0.500        2.13        
+Pediatric upper range               150          0.400        2.67        
+----------------------------------------------------------------------
+
+Key Findings:
+• Covers ≥1 full cardiac cycle for heart rates up to 56 bpm
+• Covers ≥1.5 cycles for typical pediatric resting HR (80 bpm): 1.42 cycles
+• Covers ≥1.0 cycles even during tachycardia (120 bpm): 2.13 cycles
+• Minimum coverage at pediatric upper range (150 bpm): 2.67 cycles
+
+======================================================================
+Dataset Temporal Properties: data/processed_full/train_manifest_filtered_clean.csv
+======================================================================
+
+Processed FPS:
+  Mean: 30.0
+  Most common: 30
+
+Age distribution (years):
+  Mean: 10.1
+  Median: 11.0
+  Range: 0.0 - 18.0
+
+Age bin distribution:
+age_bin
+11-15    2057
+6-10     1426
+16-18    1210
+2-5       998
+0-1       536
+
+
+======================================================================
+Suggested Paper Text
+======================================================================
+
+For Methods section (Section 3.2 - Preprocessing):
+----------------------------------------------------------------------
+Videos were preprocessed to 128×128 pixels and temporally subsampled to 
+32 frames at 30 fps (clip duration: 1.07 seconds). This temporal 
+window was selected to ensure complete cardiac cycle coverage across the 
+pediatric heart rate spectrum: at 30 fps, 32 frames span 1.07 seconds, 
+covering ≥1 complete cardiac cycle for heart rates up to 56 bpm and 
+multiple cycles for typical pediatric resting rates (80-100 bpm: 1.4-1.8 cycles).
+
+
+For Discussion section:
+----------------------------------------------------------------------
+Our choice of 32 frames at 30 fps (1.07 seconds) ensures adequate temporal 
+context for cardiac motion modeling. This duration captures 1.4 complete 
+cardiac cycles at typical pediatric resting heart rates (80 bpm) and maintains 
+coverage of at least one full cycle even during tachycardia (>120 bpm: 
+2.13 cycles), addressing concerns about temporal resolution 
+raised in prior work operating at lower frame counts.
+
+
+For Table caption or footnote:
+----------------------------------------------------------------------
+All models process clips of 32 frames at 30 fps (1.07s), sufficient to 
+capture ≥1 cardiac cycle across the pediatric HR range (60-150 bpm).
+

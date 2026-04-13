@@ -1,20 +1,89 @@
-# Ignore macOS files
+# --- OS ---
 .DS_Store
+Thumbs.db
 
-# Ignore raw dataset and large binaries
+# --- IDE ---
+.idea/
+.vscode/
+.cursor/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- Raw / heavy data (do not push) ---
 Dataset/
 data/raw/
 data/interim/
 data/processed/videos/
+data/processed_full_256/
+data/processed_full_bmi/
 
-# Python
-__pycache__/
-*.pyc
-.venv/
-venv/
+# --- Model weights & checkpoints ---
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+**/checkpoints*/
+checkpoints*/
+ef_prediction/checkpoints/
 
-# Outputs
+# --- Generated video / stacks ---
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.gif
+perfect_synthetic_copies/
+synthetic_video_frames/
+demographic_variations*/
+demographic_variations_fixed*/
+use_case_*/**/output*/
+use_case_*/**/*.mp4
+
+# --- Augmentation & bulk export folders ---
+data_augmentation_output*/
+cbvr_retrieval/embeddings/
+cbvr_retrieval/embeddings_demo/
+*.npy
+gradcam_*/
+gradcam*/
+paper_gradcam_collection/
+table_gradcam_visualizations/
+
+# --- Logs & reports ---
 logs/
 reports/
+*.log
+pipeline_results*.log
+training*.log
+wandb/
 
-
+# --- Misc large / local ---
+*.zip
+*.tar
+*.tar.gz
+*.7z
+.cache/
+tmp/
+temp/

@@ -1,0 +1,28 @@
+{
+  "evaluation_note": "Lower FID is better (typical: <100 good, <200 acceptable). Values depend on which real/synthetic clips are compared.",
+  "legacy_200_vs_200": {
+    "num_real_videos": 200,
+    "num_synthetic_videos": 200,
+    "fid": 75.08499227869437,
+    "fvd": null,
+    "description": "Earlier run (200 real vs 200 synthetic from prior manifest pairing)."
+  },
+  "repaired_evaluator_2026_04": {
+    "manifest": "use_case_1_balance_dataset/c3dgan/mixed_dataset/comparison/ratio_30pct/manifest.csv",
+    "video_dir": "use_case_1_balance_dataset",
+    "num_real_videos": 20,
+    "num_synthetic_videos": 6,
+    "fid": 124.37721546459093,
+    "fvd": null,
+    "device": "cuda",
+    "frames_per_chunk": 8,
+    "fixes_applied": [
+      "Chunked Inception forward (avoids GPU OOM on full B*T frames)",
+      "torchvision Inception_V3_Weights API",
+      "I3D only if --i3d_weights file exists",
+      "Optional --paired_manifest with file_path + source columns",
+      "load_video resize uses interpolate on T,1,H,W"
+    ],
+    "note": "This folder has 6 synthetic files in the manifest; for tighter FID re-run after generating more synthetics or point manifests to a larger synthetic set."
+  }
+}

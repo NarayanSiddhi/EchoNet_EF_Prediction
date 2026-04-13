@@ -1,0 +1,56 @@
+# C3DGAN Configuration for Targeted Data Augmentation
+
+# Model parameters
+model:
+  nz: 100  # Noise vector size
+  ngf: 64  # Generator filters
+  ndf: 64  # Discriminator filters
+  nc: 1    # Channels (1 for grayscale)
+  video_length: 96
+  video_size: 128
+
+# Training parameters
+training:
+  n_epochs: 200
+  batch_size: 20  # Increased with mixed precision (FP16 uses less memory)
+  lr_g: 0.0002   # Generator learning rate
+  lr_d: 0.0002   # Discriminator learning rate
+  beta1: 0.5
+  n_critic: 5    # Number of discriminator updates per generator update
+  lambda_gp: 10.0  # Gradient penalty weight (for WGAN-GP)
+  
+# Data augmentation target
+augmentation:
+  target_samples_per_group: 500  # Target number of samples per class group
+  focus_underrepresented: true   # Focus training on underrepresented groups
+  min_samples_to_augment: 10     # Minimum real samples needed to generate synthetic ones
+
+# Paths
+paths:
+  manifest_path: "data/processed_full/manifest_full.csv"
+  video_dir: "data/processed/videos"
+  output_dir: "c3dgan/outputs"
+  checkpoint_dir: "c3dgan/checkpoints"
+  generated_videos_dir: "c3dgan/generated_videos"
+  
+# Generation parameters
+generation:
+  n_samples_per_group: null  # Auto-calculate based on target_samples_per_group
+  save_every_n_epochs: 10    # Save checkpoint every N epochs
+  generate_samples_during_training: true
+  n_validation_samples: 16   # Number of samples to generate for validation
+
+# Quality metrics
+quality:
+  calculate_fid: false  # Fréchet Inception Distance (requires Inception model)
+  calculate_ssim: true  # Structural Similarity Index
+  calculate_psnr: true  # Peak Signal-to-Noise Ratio
+  save_sample_videos: true
+
+# GPU settings
+device: "cuda"  # Use "cuda" for GPU, "cpu" for CPU
+seed: 42
+num_workers: 8  # Maximize parallel data loading to keep GPU fed
+pin_memory: true  # Faster GPU transfer
+use_mixed_precision: true  # Enable FP16 for 1.5-2x speedup on RTX A5000
+

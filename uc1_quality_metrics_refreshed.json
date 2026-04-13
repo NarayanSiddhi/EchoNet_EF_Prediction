@@ -1,0 +1,8 @@
+{
+  "num_real_videos": 20,
+  "num_synthetic_videos": 6,
+  "fid": 124.36030192900363,
+  "fvd": null,
+  "device": "cpu",
+  "frames_per_chunk": 8
+}

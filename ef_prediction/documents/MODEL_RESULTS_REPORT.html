@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>EF prediction: model summary, results, and conclusions</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+@page {
+size: A4;
+margin: 18mm 16mm 22mm 16mm;
+}
+html {
+font-size: 11pt;
+}
+body {
+font-family: "DejaVu Sans", "Liberation Sans", Helvetica, Arial, sans-serif;
+line-height: 1.45;
+color: #222;
+max-width: 100%;
+}
+h1 {
+font-size: 18pt;
+border-bottom: 2px solid #333;
+padding-bottom: 0.25em;
+margin-top: 0;
+}
+h2 {
+font-size: 14pt;
+margin-top: 1.4em;
+border-bottom: 1px solid #bbb;
+padding-bottom: 0.15em;
+}
+h3 {
+font-size: 12pt;
+margin-top: 1.1em;
+}
+table {
+border-collapse: collapse;
+width: 100%;
+margin: 0.8em 0;
+font-size: 10pt;
+}
+th,
+td {
+border: 1px solid #999;
+padding: 6px 8px;
+text-align: left;
+vertical-align: top;
+}
+th {
+background: #f0f0f0;
+font-weight: bold;
+}
+code {
+font-family: "DejaVu Sans Mono", Consolas, monospace;
+font-size: 9.5pt;
+background: #f5f5f5;
+padding: 1px 4px;
+}
+pre code {
+display: block;
+padding: 8px;
+overflow-x: auto;
+white-space: pre-wrap;
+}
+a {
+color: #0645ad;
+}
+ul,
+ol {
+margin: 0.5em 0;
+padding-left: 1.4em;
+}
+blockquote {
+margin: 0.8em 0;
+padding-left: 1em;
+border-left: 4px solid #ccc;
+color: #444;
+}
+hr {
+border: none;
+border-top: 1px solid #ccc;
+margin: 1.5em 0;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">EF prediction: model summary, results, and
+conclusions</h1>
+</header>
+<h1 id="ef-prediction-what-we-built-results-and-takeaways">EF
+prediction: what we built, results, and takeaways</h1>
+<p>Short summary of the pediatric <strong>ejection fraction
+(EF)</strong> models in <code>ef_prediction/</code>: architecture,
+validation numbers, and how we checked <strong>demographics</strong> and
+<strong>embeddings</strong>.</p>
+<hr />
+<h2 id="what-the-models-do">What the models do</h2>
+<ul>
+<li><strong>Input:</strong> Echo <strong>video</strong> (32 frames,
+128×128) plus an <strong>11-number demographic vector</strong> (sex, age
+bin, BMI category).</li>
+<li><strong>Real model:</strong> One ResNet–LSTM stream on the
+<strong>real</strong> clip; demographics are encoded and
+<strong>concatenated</strong> with the video summary before the final
+layers that output EF.</li>
+<li><strong>Fused model:</strong> Same idea, but each frame uses a
+<strong>learned mix</strong> of <strong>real</strong> and
+<strong>synthetic</strong> video (gated fusion), then the same LSTM,
+demographics, and EF head.</li>
+</ul>
+<p>Both models train mainly to <strong>minimize EF error</strong>, with
+an extra <strong>contrastive-style loss</strong> on a
+<strong>video-only</strong> side vector (not on the part that already
+includes demographics).</p>
+<hr />
+<h2 id="results-validation">Results (validation)</h2>
+<p>EF errors are in <strong>percentage points</strong> (e.g. MAE ≈ mean
+|predicted EF − true EF|). <strong>Lower MAE / MSE / RMSE is
+better</strong>; <strong>higher R² is better</strong> (up to 1). Re-run
+<code>evaluate_ef_real.py</code> / <code>evaluate_ef_fused.py</code>
+after retraining to refresh checkpoint metrics.</p>
+<h3 id="overall-two-ways-we-logged-them">Overall (two ways we logged
+them)</h3>
+<p><strong>A — Main eval JSON</strong> (single fused run vs real
+checkpoint)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>MAE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R²</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Real</td>
+<td>4.52</td>
+<td>38.24</td>
+<td>6.18</td>
+<td>0.586</td>
+</tr>
+<tr class="even">
+<td>Fused (run 1, tag <code>20260419_173306</code>)</td>
+<td>4.40</td>
+<td>37.08</td>
+<td>6.09</td>
+<td>0.598</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: <code>ef_prediction/eval_results/real_metrics.json</code>,
+<code>ef_prediction/multi_run_results/fused_run_1_20260419_173306_metrics.json</code>.</p>
+<p><strong>B — Same cohorts, grouped summary CSV</strong> (overall lines
+only)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Line</th>
+<th>MAE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R²</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OVERALL_REAL</td>
+<td>4.52</td>
+<td>38.24</td>
+<td>6.18</td>
+<td>0.586</td>
+</tr>
+<tr class="even">
+<td>OVERALL_FUSED</td>
+<td>4.38</td>
+<td>35.97</td>
+<td>6.00</td>
+<td>0.610</td>
+</tr>
+</tbody>
+</table>
+<p>Source:
+<code>ef_prediction/group_results/final_results_summary.csv</code>.
+Numbers differ slightly from (A) for fused because the <strong>grouped
+pipeline</strong> can aggregate differently than the single-run JSON;
+both are valid snapshots.</p>
+<hr />
+<h3 id="fused-model-by-sex">Fused model — by sex</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>MAE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R²</th>
+<th><em>n</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Male</td>
+<td>3.97</td>
+<td>26.18</td>
+<td>5.12</td>
+<td>0.722</td>
+<td>6113</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>4.24</td>
+<td>33.12</td>
+<td>5.76</td>
+<td>0.764</td>
+<td>4595</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fused-model-by-age-bin">Fused model — by age bin</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>MAE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R²</th>
+<th><em>n</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0–1 y</td>
+<td>5.04</td>
+<td>49.89</td>
+<td>7.06</td>
+<td>0.823</td>
+<td>960</td>
+</tr>
+<tr class="even">
+<td>1–2 y</td>
+<td>3.94</td>
+<td>24.37</td>
+<td>4.94</td>
+<td>0.860</td>
+<td>438</td>
+</tr>
+<tr class="odd">
+<td>2–3 y</td>
+<td>3.94</td>
+<td>26.76</td>
+<td>5.17</td>
+<td>0.708</td>
+<td>459</td>
+</tr>
+<tr class="even">
+<td>3–5 y</td>
+<td>3.48</td>
+<td>20.97</td>
+<td>4.58</td>
+<td>0.436</td>
+<td>847</td>
+</tr>
+<tr class="odd">
+<td>5–8 y</td>
+<td>3.88</td>
+<td>24.72</td>
+<td>4.97</td>
+<td>0.710</td>
+<td>1515</td>
+</tr>
+<tr class="even">
+<td>8–12 y</td>
+<td>4.02</td>
+<td>28.55</td>
+<td>5.34</td>
+<td>0.734</td>
+<td>2120</td>
+</tr>
+<tr class="odd">
+<td>12–15 y</td>
+<td>4.04</td>
+<td>27.80</td>
+<td>5.27</td>
+<td>0.684</td>
+<td>2322</td>
+</tr>
+<tr class="even">
+<td>15–18 y</td>
+<td>4.21</td>
+<td>29.68</td>
+<td>5.45</td>
+<td>0.681</td>
+<td>2060</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fused-model-by-bmi-category">Fused model — by BMI category</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>MAE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R²</th>
+<th><em>n</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Underweight</td>
+<td>4.17</td>
+<td>30.67</td>
+<td>5.54</td>
+<td>0.777</td>
+<td>5302</td>
+</tr>
+<tr class="even">
+<td>Normal</td>
+<td>3.88</td>
+<td>24.69</td>
+<td>4.97</td>
+<td>0.596</td>
+<td>3643</td>
+</tr>
+<tr class="odd">
+<td>Overweight</td>
+<td>4.44</td>
+<td>38.81</td>
+<td>6.23</td>
+<td>0.775</td>
+<td>1029</td>
+</tr>
+<tr class="even">
+<td>Obese</td>
+<td>3.87</td>
+<td>26.23</td>
+<td>5.12</td>
+<td>0.686</td>
+<td>681</td>
+</tr>
+</tbody>
+</table>
+<p>Subgroup tables are from
+<strong><code>final_results_summary.csv</code></strong> (same file as
+OVERALL_B / fused breakdown).</p>
+<hr />
+<h2 id="how-we-studied-demographics-and-plots">How we studied
+demographics and plots</h2>
+<ol type="1">
+<li><p><strong>Embeddings (t-SNE / UMAP)</strong><br />
+Early plots used a vector that <strong>does not include
+demographics</strong> (video-only). Coloring by sex/age/BMI looked mixed
+<strong>because that vector never saw those inputs</strong>.<br />
+<strong>Use <code>head_input</code></strong> in the viz scripts so the
+2D plot matches what the <strong>EF head</strong> actually
+receives.</p></li>
+<li><p><strong>Ablation</strong><br />
+Script <code>ablate_demographic_effect.py</code>: compare
+<strong>normal</strong> vs <strong>zeroed</strong> vs
+<strong>shuffled</strong> demographics. If scores barely change, the
+model is leaning mostly on <strong>video</strong>; if they change a lot,
+demographics <strong>matter for the prediction</strong>.</p></li>
+<li><p><strong>Hypersphere (3D)</strong><br />
+Tool <code>visualize_hypersphere.py</code>: normalize features,
+<strong>PCA to 3D</strong>, plot on a unit sphere.
+<strong>EF-colored</strong> plots tend to show
+<strong>structure</strong> (the model organizes features around the
+task). <strong>Sex-colored</strong> plots often stay
+<strong>mixed</strong> in the first 3 directions—expected when the main
+signal is <strong>echo appearance</strong>, not a separate “sex
+axis.”</p></li>
+<li><p><strong>FairHICON PDF</strong><br />
+That paper uses <strong>genomics</strong> and <strong>separate</strong>
+male/female/common pathways. We did <strong>not</strong> copy that
+architecture; we only borrow ideas (e.g. hierarchical contrastive on the
+video side). Do not expect the same 3D “regions” unless you redesign the
+network and losses that way.</p></li>
+</ol>
+<hr />
+<h2 id="main-conclusions">Main conclusions</h2>
+<ul>
+<li>The pipeline predicts EF from <strong>video</strong>, with
+<strong>demographics fused in late</strong>; the fused variant
+<strong>beats</strong> the real model on overall MAE/MSE in the tables
+above (JSON and grouped summaries agree on direction).</li>
+<li><strong>Subgroup tables</strong> show error is <strong>not
+uniform</strong> (e.g. infants 0–1 y highest MAE; several age/BMI bins
+lower). That is descriptive reporting, not proof that demographics
+<em>cause</em> those gaps.</li>
+<li><strong>Embedding color</strong> is easy to misread: use
+<strong><code>head_input</code></strong> for “what the regressor sees,”
+and treat maps as <strong>illustrations</strong>, not proof of fairness
+or causality.</li>
+<li>To argue <strong>whether demographics change the output</strong>,
+rely on <strong>ablation</strong> and <strong>subgroup errors</strong>,
+not only on t-SNE/UMAP/sphere pictures.</li>
+</ul>
+<hr />
+<h2 id="exports">Exports</h2>
+<p>Word, HTML, and PDF copies:
+<code>ef_prediction/documents/MODEL_RESULTS_REPORT.*</code><br />
+Rebuild: <code>bash ef_prediction/export_report.sh</code></p>
+<hr />
+<p><em>Figures from saved checkpoints; update this file after major
+training or data changes.</em></p>
+</body>
+</html>

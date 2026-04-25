@@ -1,0 +1,11 @@
+{
+  "description": "Video pooled vector zeroed before head; demo_emb unchanged.",
+  "model": "fused",
+  "checkpoint": "/data/home/sai/Documents/EchoNet-Pediatric-BIGAN-AUGMENTATION/ef_prediction/checkpoints/fused/run_1_best.pth",
+  "manifest": "/data/home/sai/Documents/EchoNet-Pediatric-BIGAN-AUGMENTATION/perfect_synthetic_copies/perfect_copies_val.csv",
+  "MAE": 10.688051223754883,
+  "MSE": 148.44720458984375,
+  "RMSE": 12.183891296386719,
+  "R2": -0.608508825302124,
+  "n": 1558
+}

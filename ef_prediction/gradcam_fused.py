@@ -85,8 +85,7 @@ def main():
         fused=True
     )
 
-    backbone = cfg["model"].get("backbone", "resnet34")
-    model = PTEFNetFused(backbone=backbone).to(device)
+    model = PTEFNetFused(**PTEFNetFused.kwargs_from_cfg(cfg)).to(device)
     model.load_state_dict(
         torch.load(
             "ef_prediction/checkpoints/fused/run_1_best.pth",

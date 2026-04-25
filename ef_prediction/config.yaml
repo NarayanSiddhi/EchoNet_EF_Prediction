@@ -3,6 +3,12 @@ model:
   video_size: 128
   # resnet18 | resnet34 (34 recommended for better val MSE/MAE)
   backbone: resnet34
+  # --- Fused (real + synthetic) only: improves val when syn adds noise ---
+  # concat = original [real||syn] linear; gated = learned blend g*real+(1-g)*syn
+  fused_fusion: gated
+  fused_lstm_hidden: 192
+  fused_demo_dim: 32
+  fused_dropout: 0.25
 
 training:
   batch_size: 8
@@ -21,8 +27,22 @@ training:
   # Optimization (real + fused training)
   grad_clip_norm: 1.0
   eta_min: 1.0e-6
-  # Contrastive auxiliary loss scale
+  # Contrastive auxiliary loss scale (real training)
   hcl_weight: 0.04
+  # Fused training: often lower HCL helps EF head dominate (omit to use hcl_weight)
+  fused_hcl_weight: 0.025
+  # Hierarchical contrastive (FairHICON-style) schedule
+  hcl_h2_start_epoch: 20
+  hcl_h2_warmup_epochs: 20
+  hcl_h2_lambda_max: 1.0
+  # H1/H2 temperatures
+  hcl_temp_h1: 0.2
+  hcl_temp_h2: 0.2
+  # Prototype-weighted negatives: keep intra < inter for stability
+  hcl_alpha_intra: 0.5
+  hcl_alpha_inter: 1.0
+  # EF threshold used to derive task label for H1/H2 (EF is scaled to [0,1])
+  hcl_ef_task_threshold: 0.5
   # Training EF loss: (1 - w) * SmoothL1 + w * MSE (w in [0, 1]; higher w pushes val MSE down)
   hybrid_mse_weight: 0.5
 

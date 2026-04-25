@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import json
 import argparse
+from datetime import datetime
 from pathlib import Path
 from torch.utils.data import DataLoader
 
@@ -24,9 +25,21 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", type=int, required=True)
+    parser.add_argument(
+        "--tag",
+        type=str,
+        default=None,
+        help="Suffix for output files (default: timestamp YYYYMMDD_HHMMSS so prior runs are not overwritten).",
+    )
+    parser.add_argument(
+        "--legacy-json",
+        action="store_true",
+        help="Also merge metrics into fused_5run_metrics.json (same as old behavior).",
+    )
     args = parser.parse_args()
 
     run_id = args.run
+    tag = args.tag if args.tag else datetime.now().strftime("%Y%m%d_%H%M%S")
 
     with open("ef_prediction/config.yaml") as f:
         cfg = yaml.safe_load(f)
@@ -44,8 +57,7 @@ def main():
 
     loader = DataLoader(dataset, batch_size=8, shuffle=False)
 
-    backbone = cfg["model"].get("backbone", "resnet34")
-    model = PTEFNetFused(backbone=backbone).to(device)
+    model = PTEFNetFused(**PTEFNetFused.kwargs_from_cfg(cfg)).to(device)
     model.load_state_dict(
         torch.load(f"ef_prediction/checkpoints/fused/run_{run_id}_best.pth",
                    map_location=device)
@@ -75,41 +87,50 @@ def main():
     out_dir = Path("ef_prediction/multi_run_results")
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # Save CSV per run
+    # Save CSV per run (unique name so previous evaluations are kept)
     df = pd.DataFrame({
         "True_EF": labels,
         "Predicted_EF_Fused": preds,
         "Error": preds - labels
     })
 
-    df.to_csv(out_dir / f"fused_run_{run_id}.csv", index=False)
+    csv_path = out_dir / f"fused_run_{run_id}_{tag}.csv"
+    df.to_csv(csv_path, index=False)
 
-    # Append metrics to single JSON
     metrics = {
+        "run": run_id,
+        "tag": tag,
         "MAE": float(mae),
         "MSE": float(mse),
         "RMSE": float(rmse),
-        "R2": float(r2)
+        "R2": float(r2),
     }
 
-    json_path = out_dir / "fused_5run_metrics.json"
+    metrics_path = out_dir / f"fused_run_{run_id}_{tag}_metrics.json"
+    with open(metrics_path, "w") as f:
+        json.dump(metrics, f, indent=4)
 
-    if json_path.exists():
-        with open(json_path, "r") as f:
-            all_metrics = json.load(f)
-    else:
-        all_metrics = {}
+    if args.legacy_json:
+        json_path = out_dir / "fused_5run_metrics.json"
+        if json_path.exists():
+            with open(json_path, "r") as f:
+                all_metrics = json.load(f)
+        else:
+            all_metrics = {}
+        all_metrics[f"run_{run_id}_{tag}"] = {k: v for k, v in metrics.items() if k != "tag"}
+        with open(json_path, "w") as f:
+            json.dump(all_metrics, f, indent=4)
 
-    all_metrics[f"run_{run_id}"] = metrics
-
-    with open(json_path, "w") as f:
-        json.dump(all_metrics, f, indent=4)
-
-    print(f"\nRun {run_id} Results")
+    print(f"\nRun {run_id} Results (tag={tag})")
     print(f"MAE  : {mae:.2f}")
     print(f"RMSE : {rmse:.2f}")
     print(f"R2   : {r2:.4f}")
-    print("✓ Results saved and JSON updated\n")
+    print(f"✓ CSV:  {csv_path}")
+    print(f"✓ JSON: {metrics_path}")
+    if args.legacy_json:
+        print(f"✓ Legacy aggregate: {out_dir / 'fused_5run_metrics.json'}\n")
+    else:
+        print()
 
 
 if __name__ == "__main__":

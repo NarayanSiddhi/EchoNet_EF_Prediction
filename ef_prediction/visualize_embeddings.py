@@ -157,5 +157,4 @@ plot("UMAP - AGE", z_umap, age_labels, cmap='viridis')
 # BMI (continuous)
 plot("t-SNE - BMI", z_tsne, bmi_labels, cmap='viridis')
 plot("UMAP - BMI", z_umap, bmi_labels, cmap='viridis')
-
 print("🎉 Visualization Complete!")

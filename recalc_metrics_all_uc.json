@@ -1,0 +1,35 @@
+{
+  "UC1_balancing": {
+    "n": 0,
+    "errors": 3000,
+    "SSIM_mean": NaN,
+    "SSIM_std": NaN,
+    "PSNR_mean": NaN,
+    "PSNR_std": NaN,
+    "PSNR_inf_count": 0,
+    "MSE_mean": NaN,
+    "MSE_std": NaN
+  },
+  "UC2_demographic_variations": {
+    "n": 18681,
+    "errors": 0,
+    "SSIM_mean": 0.07830590410706234,
+    "SSIM_std": 0.05853327396999087,
+    "PSNR_mean": 15.136410546242233,
+    "PSNR_std": 1.828432192183666,
+    "PSNR_inf_count": 0,
+    "MSE_mean": 0.032523918165783976,
+    "MSE_std": 0.00874006327644906
+  },
+  "UC3_perfect_copies": {
+    "n": 6227,
+    "errors": 0,
+    "SSIM_mean": 0.9906335041185971,
+    "SSIM_std": 0.0035174314109471107,
+    "PSNR_mean": 45.44507664515271,
+    "PSNR_std": 1.1429130357555046,
+    "PSNR_inf_count": 0,
+    "MSE_mean": 3.0094006712996265e-05,
+    "MSE_std": 7.487142367285884e-06
+  }
+}

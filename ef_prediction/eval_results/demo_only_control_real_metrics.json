@@ -1,0 +1,11 @@
+{
+  "description": "Video pooled vector zeroed before head; demo_emb unchanged.",
+  "model": "real",
+  "checkpoint": "/data/home/sai/Documents/EchoNet-Pediatric-BIGAN-AUGMENTATION/ef_prediction/checkpoints/real/best.pth",
+  "manifest": "/data/home/sai/Documents/EchoNet-Pediatric-BIGAN-AUGMENTATION/data/processed_full/val_manifest.csv",
+  "MAE": 7.612581253051758,
+  "MSE": 102.55020141601562,
+  "RMSE": 10.126707077026367,
+  "R2": -0.11118900775909424,
+  "n": 1558
+}

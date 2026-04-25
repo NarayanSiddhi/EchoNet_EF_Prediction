@@ -9,7 +9,7 @@ from tqdm import tqdm
 
 from .dataset import DualVideoEFDataset
 from .models.pt_efnet_real import PTEFNetReal
-from .losses import hierarchical_loss
+from .losses import hierarchical_multidemographic_loss
 
 
 def compute_metrics(preds, labels):
@@ -31,6 +31,15 @@ def _dataloader_kwargs(training_cfg: dict, device: torch.device) -> dict:
         kw["persistent_workers"] = True
         kw["prefetch_factor"] = int(training_cfg.get("prefetch_factor", 2))
     return kw
+
+
+def _h2_lambda(epoch, start_epoch, warmup_epochs, lambda_max):
+    if epoch < start_epoch:
+        return 0.0
+    if warmup_epochs <= 0:
+        return lambda_max
+    progress = (epoch - start_epoch + 1) / float(warmup_epochs)
+    return float(lambda_max) * min(1.0, max(0.0, progress))
 
 
 def main():
@@ -69,6 +78,14 @@ def main():
     grad_clip = float(tr.get("grad_clip_norm", 1.0))
     eta_min = float(tr.get("eta_min", 1e-6))
     hcl_w = float(tr.get("hcl_weight", 0.04))
+    h2_start_epoch = int(tr.get("hcl_h2_start_epoch", 20))
+    h2_warmup_epochs = int(tr.get("hcl_h2_warmup_epochs", 20))
+    h2_lambda_max = float(tr.get("hcl_h2_lambda_max", 1.0))
+    hcl_temp_h1 = float(tr.get("hcl_temp_h1", 0.2))
+    hcl_temp_h2 = float(tr.get("hcl_temp_h2", 0.2))
+    hcl_alpha_intra = float(tr.get("hcl_alpha_intra", 0.5))
+    hcl_alpha_inter = float(tr.get("hcl_alpha_inter", 1.0))
+    ef_task_threshold = float(tr.get("hcl_ef_task_threshold", 0.5))
     mix_mse = float(tr.get("hybrid_mse_weight", 0.5))
     mix_mse = max(0.0, min(1.0, mix_mse))
     val_every = int(args.val_every if args.val_every is not None else tr.get("val_every_n_epochs", 1))
@@ -142,9 +159,14 @@ def main():
     for epoch in range(num_epochs):
 
         print(f"\n===== Epoch {epoch} =====  lr={scheduler.get_last_lr()[0]:.2e}")
+        lambda_h2_epoch = _h2_lambda(epoch, h2_start_epoch, h2_warmup_epochs, h2_lambda_max)
+        print(f"HCL phase2 λ: {lambda_h2_epoch:.4f}")
 
         model.train()
         train_losses = []
+        train_h1_losses = []
+        train_h2_losses = []
+        train_hcl_losses = []
 
         for batch in tqdm(train_loader, desc="Training"):
 
@@ -162,7 +184,19 @@ def main():
             with autocast("cuda", enabled=use_amp):
                 ef_pred, z = model(video, demo_vec)
                 loss_ef = (1.0 - mix_mse) * huber(ef_pred, ef) + mix_mse * mse_loss(ef_pred, ef)
-                loss_hcl = hierarchical_loss(z, sex, age, bmi)
+                task_labels = (ef >= ef_task_threshold).long()
+                loss_hcl, loss_h1, loss_h2 = hierarchical_multidemographic_loss(
+                    z=z,
+                    task_labels=task_labels,
+                    sex=sex,
+                    age=age,
+                    bmi=bmi,
+                    lambda_h2=lambda_h2_epoch,
+                    temp_h1=hcl_temp_h1,
+                    temp_h2=hcl_temp_h2,
+                    alpha_intra=hcl_alpha_intra,
+                    alpha_inter=hcl_alpha_inter,
+                )
                 loss = loss_ef + hcl_w * loss_hcl
 
             if use_amp:
@@ -177,8 +211,15 @@ def main():
                 optimizer.step()
 
             train_losses.append(loss.item())
+            train_hcl_losses.append(loss_hcl.item())
+            train_h1_losses.append(loss_h1.item())
+            train_h2_losses.append(loss_h2.item())
 
         print(f"Train Loss: {np.mean(train_losses):.4f}")
+        print(
+            f"Train HCL: {np.mean(train_hcl_losses):.4f} "
+            f"(H1: {np.mean(train_h1_losses):.4f}, H2: {np.mean(train_h2_losses):.4f})"
+        )
 
         run_val = (epoch % val_every == 0) or (epoch == num_epochs - 1)
         if not run_val:

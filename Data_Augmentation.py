@@ -521,7 +521,8 @@ def main():
     parser.add_argument('--manifest', type=str, 
                        default='data/processed_full/manifest_full.csv',
                        help='Path to manifest CSV')
-    parser.add_argument('--checkpoint', type=str, default=None,
+    parser.add_argument('--checkpoint', type=str,
+                       default='use_case_3_perfect_reconstruction/ckpt_uc3_128x128_T32/recon_best.pt',
                        help='Path to pretrained model checkpoint')
     parser.add_argument('--output_dir', type=str, default='data_augmentation_output',
                        help='Output directory for generated videos')
@@ -531,8 +532,8 @@ def main():
                        help='Device to use (cuda/cpu)')
     parser.add_argument('--video_length', type=int, default=32,
                        help='Number of frames (default: 32; aligns with C3D DCGAN T=32)')
-    parser.add_argument('--video_size', type=int, default=64,
-                       help='Spatial resolution (default: 64)')
+    parser.add_argument('--video_size', type=int, default=128,
+                       help='Spatial resolution (default: 128 for the retrained 128×128 checkpoint)')
     parser.add_argument('--variations_per_video', type=int, default=4,
                        help='Maximum variations to generate per real video')
     
@@ -562,7 +563,7 @@ def main():
     elif args.mode == 'generate':
         if args.checkpoint is None:
             print("Error: --checkpoint required for generation mode")
-            print("Example: --checkpoint perfect_reconstruction_c3dgan/c3dgan_best.pt")
+            print("Example: --checkpoint use_case_3_perfect_reconstruction/ckpt_uc3_128x128_T32/recon_best.pt")
             return
         
         # Load pretrained generator

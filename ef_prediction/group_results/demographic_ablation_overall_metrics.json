@@ -1,0 +1,29 @@
+{
+  "model": "real",
+  "checkpoint": "/data/home/sai/Documents/EchoNet-Pediatric-BIGAN-AUGMENTATION/ef_prediction/checkpoints/real/best.pth",
+  "manifest": "/data/home/sai/Documents/EchoNet-Pediatric-BIGAN-AUGMENTATION/data/processed_full/val_manifest.csv",
+  "group_key": "OVERALL_VAL_REAL",
+  "metrics": {
+    "normal": {
+      "MAE": 4.520339012145996,
+      "MSE": 38.23602294921875,
+      "RMSE": 6.183528423309326,
+      "R2": 0.5856912136077881,
+      "Count": 1558
+    },
+    "zero": {
+      "MAE": 4.6547465324401855,
+      "MSE": 39.75730895996094,
+      "RMSE": 6.305339813232422,
+      "R2": 0.5692072510719299,
+      "Count": 1558
+    },
+    "shuffle": {
+      "MAE": 4.539951324462891,
+      "MSE": 38.57763671875,
+      "RMSE": 6.211089611053467,
+      "R2": 0.5819896161556244,
+      "Count": 1558
+    }
+  }
+}

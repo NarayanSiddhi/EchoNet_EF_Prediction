@@ -1,0 +1,6 @@
+Model,HCL,Fusion,Data,MAE,MSE,RMSE,R2,n,checkpoint
+real_original,yes,no,real,4.5203,38.236,6.1835,0.5857,1558,ef_prediction/checkpoints/real/best.pth
+fused_original,yes,yes,real+synthetic,4.397,37.084,6.0897,0.5982,1558,ef_prediction/checkpoints/fused/run_1_best.pth
+fused_no_hcl,no,yes,real+synthetic,4.3424,35.3186,5.9429,0.6173,1558,ef_prediction/checkpoints/fused/run_99_best.pth
+real_no_hcl,no,no,real,4.4478,36.567,6.0471,0.6038,1558,ef_prediction/checkpoints/real_no_hcl/best.pth
+synth_only_no_fusion_no_hcl,no,no,synthetic,4.7956,45.1351,6.7183,0.5159,1558,ef_prediction/checkpoints/real_synth_no_fusion_no_hcl/best.pth

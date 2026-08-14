@@ -112,7 +112,7 @@ class PTEFNetFused(nn.Module):
 
         return self.frame_proj(feats)
 
-    def forward(self, real_video, syn_video, demo_vec):
+    def forward(self, real_video, syn_video, demo_vec, *, return_embedding=None):
 
         real_feats = self.extract_features(real_video)
         syn_feats = self.extract_features(syn_video)
@@ -134,4 +134,13 @@ class PTEFNetFused(nn.Module):
         h = torch.cat([pooled, demo_emb], dim=1)
         ef = self.head(h).squeeze(1)
 
-        return ef, z
+        if return_embedding == "head_input":
+            emb = h
+        elif return_embedding in (None, "contrastive"):
+            emb = z
+        else:
+            raise ValueError(
+                "return_embedding must be None, 'contrastive', or 'head_input', "
+                f"got {return_embedding!r}"
+            )
+        return ef, emb

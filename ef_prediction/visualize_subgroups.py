@@ -10,6 +10,7 @@ import os
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
 from sklearn.manifold import TSNE
 import umap
 from torch.utils.data import DataLoader
@@ -83,8 +84,12 @@ z_tsne = tsne.fit_transform(embeddings)
 umap_model = umap.UMAP(n_components=2, random_state=42)
 z_umap = umap_model.fit_transform(embeddings)
 
+# Binary sex colormap (matches visualize_embeddings.py)
+SEX_SCATTER_CMAP = ListedColormap(["#D62728", "#17BECF"])
+
+
 # ---------------- PLOT FUNCTION ----------------
-def plot_subset(title, data, labels, mask, cmap):
+def plot_subset(title, data, labels, mask, cmap, *, sex_binary=False):
     subset_data = data[mask]
     subset_labels = labels[mask]
 
@@ -92,16 +97,16 @@ def plot_subset(title, data, labels, mask, cmap):
         return
 
     plt.figure(figsize=(6,5))
-    scatter = plt.scatter(
-        subset_data[:, 0],
-        subset_data[:, 1],
-        c=subset_labels,
-        cmap=cmap,
-        s=10
-    )
+    scatter_kw = dict(c=subset_labels, cmap=cmap, s=10)
+    if sex_binary:
+        scatter_kw["vmin"] = 0
+        scatter_kw["vmax"] = 1
+    scatter = plt.scatter(subset_data[:, 0], subset_data[:, 1], **scatter_kw)
 
     plt.title(title)
-    plt.colorbar(scatter)
+    cb = plt.colorbar(scatter, ticks=[0, 1] if sex_binary else None)
+    if sex_binary:
+        cb.set_ticklabels(["0", "1"])
     plt.grid(True)
     plt.tight_layout()
 
@@ -117,8 +122,8 @@ print("\n🔵 Generating SEX subgroup plots...")
 for s in np.unique(sex_labels):
     mask = sex_labels == s
 
-    plot_subset(f"t-SNE_SEX_{s}", z_tsne, sex_labels, mask, "tab10")
-    plot_subset(f"UMAP_SEX_{s}", z_umap, sex_labels, mask, "tab10")
+    plot_subset(f"t-SNE_SEX_{s}", z_tsne, sex_labels, mask, SEX_SCATTER_CMAP, sex_binary=True)
+    plot_subset(f"UMAP_SEX_{s}", z_umap, sex_labels, mask, SEX_SCATTER_CMAP, sex_binary=True)
 
 # ---------------- AGE GROUPS ----------------
 print("\n🟢 Generating AGE subgroup plots...")

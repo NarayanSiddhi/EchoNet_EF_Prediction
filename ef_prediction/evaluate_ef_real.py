@@ -41,7 +41,7 @@ def main():
     backbone = cfg["model"].get("backbone", "resnet34")
     model = PTEFNetReal(backbone=backbone).to(device)
     model.load_state_dict(
-        torch.load("ef_prediction/checkpoints/real/best.pth", map_location=device)
+        torch.load("ef_prediction/checkpoints/real_with_hcl_100/best.pth", map_location=device)
     )
     model.eval()
 

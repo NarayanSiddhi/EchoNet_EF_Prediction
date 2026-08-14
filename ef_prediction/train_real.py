@@ -57,6 +57,18 @@ def main():
         default=None,
         help="Override training.val_every_n_epochs (validate less often = faster).",
     )
+    parser.add_argument(
+        "--hcl-weight",
+        type=float,
+        default=None,
+        help="Override training.hcl_weight (e.g. 0 for no-HCL ablation).",
+    )
+    parser.add_argument(
+        "--checkpoint-dir",
+        type=str,
+        default=None,
+        help="Override checkpoint directory (default: ef_prediction/checkpoints/real).",
+    )
     args = parser.parse_args()
 
     print("\n🚀 REAL EF training (late fusion + ResNet + cosine LR + hybrid loss)\n")
@@ -77,7 +89,7 @@ def main():
     backbone = cfg["model"].get("backbone", "resnet34")
     grad_clip = float(tr.get("grad_clip_norm", 1.0))
     eta_min = float(tr.get("eta_min", 1e-6))
-    hcl_w = float(tr.get("hcl_weight", 0.04))
+    hcl_w = float(args.hcl_weight if args.hcl_weight is not None else tr.get("hcl_weight", 0.04))
     h2_start_epoch = int(tr.get("hcl_h2_start_epoch", 20))
     h2_warmup_epochs = int(tr.get("hcl_h2_warmup_epochs", 20))
     h2_lambda_max = float(tr.get("hcl_h2_lambda_max", 1.0))
@@ -150,8 +162,9 @@ def main():
     huber = torch.nn.SmoothL1Loss()
     mse_loss = torch.nn.MSELoss()
 
-    ckpt_dir = Path("ef_prediction/checkpoints/real")
+    ckpt_dir = Path(args.checkpoint_dir or "ef_prediction/checkpoints/real")
     ckpt_dir.mkdir(parents=True, exist_ok=True)
+    print(f"HCL weight: {hcl_w} | checkpoints: {ckpt_dir}")
 
     best_mse = float("inf")
     best_mae_at_best_mse = float("inf")

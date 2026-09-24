@@ -1,3 +1,4 @@
+import argparse
 import yaml
 import torch
 import numpy as np
@@ -21,6 +22,20 @@ def compute_metrics(preds, labels):
 
 def main():
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--checkpoint",
+        type=str,
+        default="ef_prediction/checkpoints/real_with_hcl_100/best.pth",
+    )
+    parser.add_argument(
+        "--tag",
+        type=str,
+        default=None,
+        help="If set, write real_{tag}_metrics.json instead of overwriting real_metrics.json.",
+    )
+    args = parser.parse_args()
+
     with open("ef_prediction/config.yaml") as f:
         cfg = yaml.safe_load(f)
 
@@ -41,7 +56,7 @@ def main():
     backbone = cfg["model"].get("backbone", "resnet34")
     model = PTEFNetReal(backbone=backbone).to(device)
     model.load_state_dict(
-        torch.load("ef_prediction/checkpoints/real_with_hcl_100/best.pth", map_location=device)
+        torch.load(args.checkpoint, map_location=device)
     )
     model.eval()
 
@@ -79,18 +94,20 @@ def main():
         "Error": preds - labels
     })
 
-    df.to_csv(out_dir / "real_results.csv", index=False)
+    stem = f"real_{args.tag}" if args.tag else "real"
+    df.to_csv(out_dir / f"{stem}_results.csv", index=False)
 
     metrics = {
+        "checkpoint": args.checkpoint,
         "MAE": float(mae),
         "MSE": float(mse),
         "RMSE": float(rmse),
         "R2": float(r2)
     }
 
-    pd.Series(metrics).to_json(out_dir / "real_metrics.json")
+    pd.Series(metrics).to_json(out_dir / f"{stem}_metrics.json")
 
-    print("\nSaved real_results.csv and real_metrics.json")
+    print(f"\nSaved {stem}_results.csv and {stem}_metrics.json")
 
 
 if __name__ == "__main__":

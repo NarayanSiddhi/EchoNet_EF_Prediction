@@ -1,0 +1,93 @@
+
+                      PSB Review Form
+
+Each of the subitems below will be rated from 1-5: 
+
+1  =  very positive aspect of this paper
+2  =  positive aspect of this paper
+3  =  neutral or irrelevant criterion for this paper 
+4  =  negative aspect of this paper
+5  =  very negative aspect of this paper
+
+
+YOU MUST ALSO PROVIDE COMMENTS TO THE AUTHORS IN PROSE.  IT IS NOT
+ACCEPTABLE TO MERELY FILL OUT NUMBERS, AND RETURN THE REVIEW!
+
+
+Paper Title: EchoStature: Spatial Demographic Conditioning for Pediatric Ejection Fraction Regression, with Subgroup-Stratified Evaluation
+
+First Author Last Name: Narayan
+
+
+Appropriateness for PSB
+    Is relevant to conference themes : 2
+    Is relevant to session themes    : 3
+    Meets length restriction (12 pages): 1
+
+Comment:  The manuscript is relevant to PSB and is reasonably well aligned with the session. Although the work does not involve ethnographic analysis or explicitly study sociotechnical aspects of clinical deployment, the session call specifically includes computational AI/ML approaches using multimodal clinical data, computer vision applications in clinical settings. 
+
+
+Presentation
+    Is clearly written                              : 2
+    Appropriate title and abstract                  : 2
+    Adequate figures and tables                     : 3
+    Clear problem statement (inputs and outputs)    : 2 
+    Clear descriptions of algorithms                : 3
+    Provides appropriate detail                     : 4
+    Describes scope and limitations of the approach : 2
+    Describes implementation status                 : 2
+    Adequate references                             : 2
+
+Comment: The paper is generally clear and well organized, and the motivation for subgroup-stratified evaluation is communicated effectively. However, the C3DGAN component is not described at a level sufficient for reproducibility. The exact generator inputs, training objective, training partition, and mechanism producing the paired clip should be stated explicitly.
+	​ 
+
+Significance
+    Represents a biologically important advance              : 3
+    Addresses a biologically important and realistic problem : 2
+    Represents a computationally important advance           : 3
+    Addresses a computationally important problem            : 5
+    Is likely to scale up to realistic problems              : 3
+    Provides new evidence for an existing technique          : 2
+
+Comment: Pediatric EF estimation is a clinically realistic and important problem, and the paper's strongest contribution is not the small architectural improvement but the observation that performance differences across age groups substantially exceed the difference between architectures. However, the paper sometimes interprets these differences too causally. The statement that the infant performance gap “follows from the physiology of infancy” is plausible, but the proposed mechanisms—higher heart rate yielding fewer cardiac cycles and smaller chambers occupying fewer pixels—are not directly tested.
+
+
+Originality
+    Represents a novel approach or combination of approaches : 2
+    Has not been published before                            : 3
+    Points out differences from related research             : 2
+    Reformulates a problem in an important way               : 2
+
+
+Comment: The combination of demographic-conditioned synthetic video generation, gated fusion with the real echocardiogram, and hierarchical contrastive learning is reasonably novel. However,The novelty of individual technical components (like gated fusion, conditional synthesis, supervised contrastive learning) is more incremental than fundamental. 
+
+
+Technical Content
+    Evaluates the effectiveness of implementation or techniques : 2
+    The approach is supported with sound arguments              : 2
+    The approach is supported with theoretical analyses         : 2
+    The approach is supported with experimental results         : 3
+    The approach is technically sound                           : 4
+
+
+Additional 
+
+Overall recommendation: MARGINAL
+
+     ACCEPT            MARGINAL             REJECT
+
+Your confidence in recommendation: MEDIUM
+
+     STRONG            MEDIUM               WEAK
+
+
+________________________________________________________________
+
+Reviewer LLM Attestation
+
+I used a secure LLM to assist with language editing and polishing of this review. All scores, judgments, and substantive comments are my own, based on my reading of the manuscript, and I take full responsibility for the content of the review.
+
+
+
+
+

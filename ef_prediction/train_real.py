@@ -1,4 +1,5 @@
 import argparse
+import random
 import yaml
 import torch
 import numpy as np
@@ -10,6 +11,13 @@ from tqdm import tqdm
 from .dataset import DualVideoEFDataset
 from .models.pt_efnet_real import PTEFNetReal
 from .losses import hierarchical_multidemographic_loss
+
+
+def set_seed(seed):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
 
 
 def compute_metrics(preds, labels):
@@ -69,9 +77,18 @@ def main():
         default=None,
         help="Override checkpoint directory (default: ef_prediction/checkpoints/real).",
     )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=None,
+        help="If set, seed RNG and save seed_{seed}_best.pth instead of best.pth.",
+    )
     args = parser.parse_args()
 
     print("\n🚀 REAL EF training (late fusion + ResNet + cosine LR + hybrid loss)\n")
+    if args.seed is not None:
+        set_seed(args.seed)
+        print(f"Seed: {args.seed}")
 
     with open("ef_prediction/config.yaml") as f:
         cfg = yaml.safe_load(f)
@@ -164,7 +181,9 @@ def main():
 
     ckpt_dir = Path(args.checkpoint_dir or "ef_prediction/checkpoints/real")
     ckpt_dir.mkdir(parents=True, exist_ok=True)
-    print(f"HCL weight: {hcl_w} | checkpoints: {ckpt_dir}")
+    best_name = f"seed_{args.seed}_best.pth" if args.seed is not None else "best.pth"
+    best_path = ckpt_dir / best_name
+    print(f"HCL weight: {hcl_w} | checkpoint: {best_path}")
 
     best_mse = float("inf")
     best_mae_at_best_mse = float("inf")
@@ -269,7 +288,7 @@ def main():
             best_mse = mse
             best_mae_at_best_mse = mae
             m_save = getattr(model, "_orig_mod", model)
-            torch.save(m_save.state_dict(), ckpt_dir / "best.pth")
+            torch.save(m_save.state_dict(), best_path)
             print(f"✓ Saved best checkpoint (val MSE={mse:.2f}, MAE={mae:.2f})")
 
         scheduler.step()

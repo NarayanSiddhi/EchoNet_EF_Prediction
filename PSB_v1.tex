@@ -1,0 +1,693 @@
+%\documentclass[wsdraft]{ws-procs11x85}
+
+\documentclass{ws-procs11x85}
+
+\usepackage{ws-procs-thm}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\begin{document}
+% =========================================================
+% COVER LETTER — PAGE 1
+% =========================================================
+\thispagestyle{empty}
+
+\begin{flushright}
+August 3, 2026
+\end{flushright}
+
+\vspace{1em}
+\noindent Pacific Symposium on Biocomputing 2027
+
+\vspace{1em}
+\noindent Dear PSB Program and Session Organizers,
+
+\vspace{1em}
+\noindent Please consider our manuscript,
+\textbf{EchoStature: Spatial Demographic Conditioning for Pediatric Ejection Fraction Regression, with Subgroup-Stratified Evaluation}
+for presentation and publication at the Pacific Symposium on Biocomputing 2027.
+
+\vspace{0.5em}
+\noindent  This work concerns how pediatric cardiac imaging models are evaluated. Deep video models now estimate left ventricular ejection fraction at accuracy comparable to expert readers, but reported performance is pooled across cohorts that span an order of magnitude in body size. We show on EchoNet-Pediatric that error varies more than tenfold as much across pediatric age groups as it does between architectures, with infants incurring the highest error of any subgroup. Pooled accuracy therefore conceals clinically meaningful variation, and it conceals it for the youngest patients, for whom echocardiography is most often the only available assessment of ventricular function. We further introduce a conditional generative approach that supplies demographic context as spatiotemporal structure rather than as a scalar offset, and we evaluate its behavior under controlled demographic perturbation.
+
+\vspace{0.5em}
+\noindent  We respectfully request that the manuscript be reviewed for the following PSB session:
+Sociotechnical Ethnography in Health Informatics: Bridging Technology, Practice, and Human Experience.
+
+
+\vspace{0.5em}
+\noindent The corresponding authors are:\\
+\textbf{Mohammad I Husain, Ph.D.} and \textbf{Sai Chandra Kosaraju, Ph.D.},\\
+Department of Computer Science\\
+California State Polytechnic University, 
+Pomona, California, USA\\
+Email: \href{mailto:mihusain@cpp.edu}{mihusain@cpp.edu} and \href{mailto:skosaraju@cpp.edu}{skosaraju@cpp.edu}
+
+\vspace{0.5em}
+\noindent We confirm that this manuscript contains original, unpublished results and is not currently under consideration for publication or presentation elsewhere.
+All authors have reviewed the manuscript, concur with its contents, and approve its submission to the Pacific Symposium on Biocomputing.\\
+
+\noindent \textbf{Large language model disclosure:}
+A large language model was used to assist with language editing and to improve the clarity and organization of portions of the manuscript.
+All generated text was reviewed and revised by the authors.
+No large language model was used to generate research results, analyze data, or draw scientific conclusions.
+The authors take full responsibility for the accuracy and integrity of the manuscript.
+
+\vspace{0.5em}
+\noindent Thank you for considering our manuscript for PSB 2027.
+
+\vspace{1em}
+\noindent Sincerely,\\
+Mohammad I Husain, Ph.D. Sai Chandra Kosaraju, Ph.D.
+
+\newpage
+\title{EchoStature: Spatial Demographic Conditioning for Pediatric Ejection Fraction Regression, with Subgroup-Stratified Evaluation}
+
+\author{Siddhi Narayan$^{\dagger1}$, Khadeeja Hussain$^{\dagger1}$, Sai Phani Parsa${^{2}}$, Jahnavi Veeramachinani${^{3}}$, Mohammad Husain$^{*1}$, Sai Chandra Kosaraju$^{*1}$}
+
+\address{$^1$Department of Computer Science, California State Polytechnic University, Pomona,  California, USA}
+
+\address{$^2$Department of Computer Science, University of Nevada Las Vegas, Las Vegas,  Nevada, USA}
+
+\address{$^3$Department of Information Systems, University of Nevada Las Vegas, Las Vegas,  Nevada, USA}
+
+\address{$^*$Corresponding Authors: \href{mailto:mihusain@cpp.edu}{mihusain@cpp.edu}, \href{mailto:skosaraju@cpp.edu}{skosaraju@cpp.edu}}
+% \author{Third Author}
+
+% \address{Group, Laboratory, Street,\\
+% City, State ZIP/Zone, Country\\
+% E-mail: an\_author@laboratory.com}
+
+\begin{abstract}
+Left ventricular ejection fraction (EF) is the principal measure of systolic function in pediatric echocardiography, and deep video models now estimate it at accuracy comparable to expert readers.
+Pediatric cohorts nonetheless span an order of magnitude in body size, and reported accuracy is pooled across that range.
+Body size, rather than age or sex, governs pediatric cardiac dimensions, and it acts on echocardiograms through geometry rather than as a scalar offset, yet demographic conditioning in EF regression conventionally encodes it as a low-dimensional vector combined after spatial pooling.
+We present \textsc{EchoStature}, which renders demographic attributes into a paired synthetic echocardiographic clip using a conditional 3D generative model and fuses that rendering with the real acquisition through a learned gate, so that demographic context reaches the encoder as spatiotemporal structure while the gate limits the propagation of reconstruction artifacts.
+Training additionally employs a hierarchical contrastive objective that organizes the latent space by EF and by demographic subgroup.
+On EchoNet-Pediatric, \textsc{EchoStature} attains 4.40 MAE against 4.52 for a video-only reference model, and predictions change by at most 0.06 percentage points when demographic attributes are zeroed or permuted at inference, indicating that the model does not substitute metadata for visual evidence of ventricular mechanics.
+Subgroup-stratified evaluation reveals a substantially larger effect: error varies more than tenfold as much across pediatric age groups as it does between the two architectures, with infants aged 0--1 years reaching 5.23 MAE against 3.90 for the 2--5 year group.
+Pooled accuracy therefore conceals clinically meaningful variation, and it conceals it for the youngest patients, for whom echocardiography is most often the only available assessment of ventricular function.
+We report subgroup-stratified error for every configuration and argue that the practice should be standard in pediatric EF regression. Code availability:\href{github}{https://github.com/aimlx-labcpp/EchoStature}
+\end{abstract}
+
+\keywords{Pediatric echocardiography; Ejection fraction regression; Subgroup performance; Demographic conditioning; Gated feature fusion; Conditional video generation; Counterfactual analysis; Explainable AI.}
+
+% \keywords{Pediatric Echocardiography, Ejection Fraction Prediction, C3DGAN-Based Augmentation, Fusion Modeling, Grad-CAM, Counterfactual Analysis, Medical AI Interpretability.}
+
+% required, do-not-remove
+\copyrightinfo{${^{\dagger}}$Authors contributed equally to this work.\\ \copyright\ 2024 The Authors. Open Access chapter published by World Scientific Publishing Company and distributed under the terms of the Creative Commons Attribution Non-Commercial (CC BY-NC) 4.0 License.}
+
+\newpage
+
+
+\section{Introduction}
+
+Left ventricular ejection fraction (EF) anchors the clinical assessment of systolic function.
+Clinicians use EF to diagnose cardiomyopathy, to stage heart failure, and to time therapy.
+Echocardiography provides the primary route to EF because it is fast, portable, and free of ionizing radiation, and it serves as the frontline diagnostic tool for cardiac disease in children.\cite{ouyang2020echonetdynamic,reddy2023echonetpeds}
+Manual estimation nonetheless remains imprecise despite standardized acquisition protocols.
+Readers select an adequate view, trace endocardial borders, and choose representative end-diastolic and end-systolic frames, and each step introduces error.
+Human assessment samples only a limited number of cardiac cycles and carries considerable inter-observer variability even after years of training.\cite{ouyang2020echonetdynamic}
+
+Pediatric anatomy varies far more widely than adult anatomy.
+Cardiac structure and physiology change rapidly from infancy through adolescence, so body surface area, chamber dimensions, and resting heart rate all shift substantially across the age range.
+The EchoNet-Pediatric benchmark spans that range, drawing 4,467 studies from 1,958 patients aged 0 to 18 years.\cite{reddy2023echonetpeds}
+
+EchoNet-Dynamic established video-based EF regression at expert-level accuracy.
+The model regresses EF from spatiotemporal convolutional features across multiple cardiac cycles, reaching a mean absolute error of 4.1\% with variance comparable to human experts,\cite{ouyang2020echonetdynamic} and factorized spatiotemporal convolutions form the backbone of this model family.\cite{tran2018r2plus1d}
+Subsequent architectures improved frame selection, anatomical grounding, and temporal aggregation.
+EchoGNN infers a latent graph over frames and learns weights identifying the frames that drive the estimate.\cite{mokhtari2022echognn}
+Lightweight spatiotemporal graphs combine anatomical keypoints with segmentation,\cite{thomas2022echographs} multitask networks add auxiliary anatomical supervision,\cite{li2023echoefnet} and transformer architectures replace convolutional aggregation with attention while admitting clips of arbitrary length.\cite{reynaud2021uvt}
+
+These advances did not transfer cleanly to children.
+A pediatric retraining of the EchoNet architecture estimated EF significantly better than an adult model applied to the same clips ($P<.001$), reaching a mean absolute error of 3.66\% when both apical four-chamber and parasternal short-axis views were available.\cite{reddy2023echonetpeds}
+Pooled accuracy nonetheless conceals subgroup variation.
+Eighty-six percent of studies in EchoNet-Pediatric carry an EF of at least 55\%, and representation across sex, age, and body habitus remains uneven.\cite{reddy2023echonetpeds}
+Imbalanced training cohorts produce classifiers with systematically worse performance on the underrepresented group,\cite{larrazabal2020gender} cardiac segmentation models exhibit the same pattern,\cite{puyolanton2021fairness} and chest radiograph classifiers reportedly underdiagnose under-served subgroups, an analysis that subsequent commentary contested.\cite{seyyedkalantari2021underdiagnosis}
+Pediatric EF regression therefore demands subgroup-stratified reporting rather than a single pooled metric.
+
+Body size governs pediatric cardiac dimensions more strongly than age or sex.
+Body-surface-area-indexed $Z$ scores of cardiovascular structures remain largely unaffected by age, sex, race, and ethnicity across the Pediatric Heart Network cohort.\cite{lopez2017zscores}
+Body habitus constitutes a spatial attribute, since it changes chamber dimensions, sector geometry, and the scale at which ventricular motion appears in the image.
+Existing demographic fusion strategies do not preserve that spatial character.
+Multimodal EF architectures encode demographics as a low-dimensional vector and combine it with pooled video features, after global pooling has discarded spatial structure.\cite{lee2025ibignn}
+Broadcasting the vector into the input volume grants spatial extent but not spatial structure, since a broadcast attribute remains uniform across the field of view and cannot express how body habitus alters chamber scale or wall motion at a given location.
+Semantic synthesis exhibits the analogous limitation, where uniform conditioning washes out through network depth while spatially varying conditioning persists.\cite{park2019spade}
+Feature-wise modulation offers a partial remedy, though it too acts uniformly across positions,\cite{perez2018film} and any short, low-dimensional route from metadata to label additionally invites shortcut learning.\cite{geirhos2020shortcut}
+
+Conditional generative models can express an attribute as image structure rather than as a scalar.
+Conditioning steers generation toward specified attributes,\cite{mirza2014conditional} three-dimensional convolutions extend this control to video by modeling space and time jointly,\cite{tran2015c3d} and D'ARTAGNAN applies the principle to echocardiography, generating clips at altered ejection fractions while retaining a patient's anatomy and imaging style.\cite{reynaud2022dartagnan}
+Generated data nonetheless carry risk.
+Synthetic medical data mislead when realism substitutes for downstream utility,\cite{chen2021syntheticdata} and mode collapse, texture artifacts, and residual generator bias inject spurious correlations.\cite{reynaud2023echodiffusion}
+Any architecture that consumes generated input therefore requires a mechanism to limit its influence.
+
+Contrastive objectives impose structure on imbalanced latent spaces, and attribution methods expose the evidence a model uses.
+Contrastive objectives shape latent geometry by pulling related samples together and pushing unrelated samples apart,\cite{chen2020simclr} and supervised variants extend the idea to labeled data by treating all same-label samples as positives.\cite{khosla2020supcon}
+Pediatric cohorts present exactly the conditions under which such structure matters.
+On the evaluation side, Grad-CAM highlights the regions that most influence a prediction,\cite{selvaraju2017gradcam} and saliency analysis verifies that echocardiographic models follow cardiac structures.\cite{ghorbani2020interpretation}
+Method choice constrains what such maps can support: Grad-CAM and plain gradients remain sensitive to model parameters under randomization tests, while Guided Backpropagation and Guided Grad-CAM do not.\cite{adebayo2018sanity}
+Counterfactual explanation addresses a different question, perturbing one input while holding the rest fixed to expose the dependence of a prediction on that input,\cite{wachter2017counterfactual} and subgroup-aware representation learning pursues the same goal from the training side.\cite{ko2026fairhicon}
+
+These threads converge on a set of design requirements for pediatric EF regression.
+Demographic context should reach the encoder as spatial structure rather than as a scalar offset, since body habitus acts on echocardiograms through geometry.
+A conditional video generator can supply that structure by rendering demographic attributes into a clip, but the resulting stream must remain subordinate to the real acquisition so that reconstruction artifacts do not propagate into the estimate.
+The latent space should be organized by both the regression target and the demographic subgroup, given the imbalance of pediatric cohorts.
+Evaluation should combine parameter-sensitive attribution with controlled demographic perturbation, and should report error by subgroup rather than in aggregate.
+
+{\color{blue}We propose \textsc{EchoStature}, a gated fusion architecture that realizes these requirements by combining real and synthetic streams. The name reflects the premise of this work: body stature, rather than age or sex, drives the geometry that a model must read from a pediatric echocardiogram. \textsc{EchoStature} pairs each echocardiographic clip with a demographically rendered synthetic clip from our C3DGAN generator, encodes both streams with a shared frame encoder, and combines their embeddings through a learned gate before temporal aggregation. Demographic attributes additionally enter as a low-dimensional embedding concatenated with the pooled video representation. Training employs a hierarchical contrastive objective that structures the latent space by EF and by demographic subgroup. On EchoNet-Pediatric, \textsc{EchoStature} improves EF regression over a video-only reference model and exhibits minimal sensitivity to demographic perturbation at inference. Subgroup-stratified evaluation reveals a larger effect than either: error varies more than tenfold as much across pediatric age groups as it does between the two architectures, with infants incurring the highest error of any subgroup. This asymmetry, rather than the architectural margin, is the principal finding of this work.
+}
+
+{\color{red}We propose \textsc{EchoStature}, a gated fusion architecture that combines real
+and demographically rendered synthetic video streams. \textsc{EchoStature} pairs
+each echocardiographic clip with a synthetic clip generated from its
+demographic attributes, encodes both streams with a shared frame encoder,
+and combines their embeddings through a learned gate before temporal
+aggregation. Demographic attributes additionally enter as a low-dimensional
+embedding concatenated with the pooled video representation. Training
+employs a hierarchical contrastive objective that structures the latent
+representation by EF and demographic subgroup.
+
+The contribution of this work is therefore twofold. First, \textsc{EchoStature}
+provides a mechanism for incorporating demographic context as both
+spatiotemporal structure and an explicit embedding. Second, the study
+performs subgroup-stratified evaluation rather than relying exclusively on
+pooled regression metrics. On the evaluated validation set, \textsc{EchoStature}
+achieves lower pooled error than the video-only reference model, while
+subgroup analysis reveals substantially larger variation across pediatric
+age groups. In particular, infants aged 0-1 years exhibit higher error than
+the 2-5 year group. This subgroup variation motivates reporting
+pediatric EF regression performance at a more granular level than a single
+aggregate metric.
+}
+
+\begin{figure*}[!ht]
+    \centering
+    \includegraphics[width=0.95\linewidth]{images/model_overview.png}
+    \caption{Overview of the proposed ECHOSTATURE model. The benchmark model estimates ejection fraction (EF) from a real echocardiography video and demographic embedding, whereas ECHOSTATURE additionally incorporates a paired synthetic reconstruction through gated feature fusion to improve EF prediction.}
+    \label{fig:model_overview}
+\end{figure*}
+\section{Methodology}
+
+\subsection{Overview}
+
+\textsc{EchoStature} estimates pediatric EF from an echocardiographic clip, its demographic attributes, and a demographically rendered synthetic clip.
+The real clip and the synthetic rendering pass through a shared frame encoder, and a learned gate combines their frame-level embeddings before temporal aggregation.
+Demographic attributes additionally enter as a low-dimensional embedding concatenated with the pooled video representation, following standard practice in multimodal EF regression.\cite{lee2025ibignn}
+Weight sharing across the two streams keeps them in a common embedding space and confines the additional parameters to the gating network.
+Figure~\ref{fig:model_overview} summarizes the architecture.
+
+\subsection{Feature representation}
+
+Each echocardiographic clip is resized to $128 \times 128$ pixels, uniformly sampled or zero-padded to a fixed length of $T=32$ frames, and normalized to $[0,1]$.
+Demographic attributes supply contextual information that the clip does not directly reveal, since acquisition geometry and chamber scale depend on body size.\cite{lopez2017zscores}
+Sex, age bin, and BMI category are encoded as an 11-dimensional one-hot vector comprising two sex categories, five age bins, and four BMI categories,
+
+\begin{align}
+d &\in \{0,1\}^{11},\\
+e &= \psi(d)\in\mathbb{R}^{32},
+\end{align}
+
+{\color{blue}where $\psi(\cdot)$ denotes a lightweight multilayer perceptron.}
+{\color{red}where $\mathbf{d}$ denotes the demographic attribute vector,
+$\psi(\cdot)$ denotes a lightweight multilayer perceptron, and
+$\mathbf{e}$ denotes the resulting 32-dimensional demographic embedding.} {\color{blue}The same vector $d$ conditions the C3DGAN generator, which renders a synthetic clip $x_{\mathrm{syn}}$ paired with the real clip $x_{\mathrm{real}}$ and sharing its EF label. The generator therefore expresses demographic attributes as spatiotemporal structure, whereas $e$ expresses them as a scalar offset applied after pooling.}
+{\color{red}The synthetic clip is not sampled from noise. A conditional 3D reconstruction network $G$ receives the real clip $\mathbf{x}_{\mathrm{real}}$ and the same demographic vector $\mathbf{d}$, and outputs a paired clip $\mathbf{x}_{\mathrm{syn}}=G(\mathbf{x}_{\mathrm{real}}, \mathbf{d})$. $G$ is a 3D U-Net: $\mathbf{d}$ is embedded and fused into the video features, and the output is a reconstruction of $\mathbf{x}_{\mathrm{real}}$ at 16 frames and $64\times 64$ resolution. $G$ was trained adversarially for 183 epochs; the exact loss weights are not recoverable from the saved checkpoint. EchoStature does not call $G$ during EF training. It loads the precomputed clip and resamples it, as it does the real clip, to $T=32$ frames at $128\times 128$. The EF label of $\mathbf{x}_{\mathrm{syn}}$ is the label of $\mathbf{x}_{\mathrm{real}}$. Here, $\mathbf{x}_{\mathrm{real}}$ denotes the observed echocardiographic clip and $\mathbf{x}_{\mathrm{syn}}$ denotes its paired reconstruction.}
+% Section~\ref{sec:generator} details the generator architecture and its training procedure.
+
+\subsection{Architecture and training}
+
+Let $\phi(\cdot)$ denote the frame encoder, comprising a 2D convolutional backbone followed by a linear projection to dimension $d_f$.
+The same encoder is applied to corresponding frames of both streams,
+
+\begin{align}
+r_t &= \phi\!\left(x_t^{\mathrm{real}}\right)\in\mathbb{R}^{d_f}, \\
+\tilde{r}_t &= \phi\!\left(x_t^{\mathrm{syn}}\right)\in\mathbb{R}^{d_f},
+\end{align}
+
+for $t=1,\ldots,T$.
+Frame-wise encoding admits a gate that operates at every time step, allowing the model to vary its reliance on the rendered stream across the cardiac cycle.
+
+A gating network $\gamma(\cdot)$ estimates the per-dimension contribution of each stream at every frame,
+
+\begin{align}
+c_t &= [r_t; \tilde{r}_t] \in\mathbb{R}^{2d_f}, \\
+g_t &= \sigma\!\left(\gamma(c_t)\right) \in [0,1]^{d_f}, \\
+f_t &= g_t \odot r_t + (1-g_t)\odot \tilde{r}_t,
+\end{align}
+
+{\color{blue}where $\odot$ denotes element-wise multiplication and $\sigma(\cdot)$ the element-wise sigmoid.}{\color{red}where $\odot$ denotes element-wise multiplication and
+$\sigma(\cdot)$ denotes the element-wise sigmoid. Here,
+$\mathbf{r}_t$ and $\tilde{\mathbf{r}}_t$ denote the frame-level
+representations of the real and synthetic streams, respectively,
+$\mathbf{c}_t$ is their concatenated representation,
+$\mathbf{g}_t$ is the learned gate, and $\mathbf{f}_t$ is the resulting
+fused representation at time step $t$.} The convex form bounds the synthetic contribution and allows the network to suppress the rendered stream entirely as $g_t\rightarrow1$, which limits the propagation of reconstruction artifacts.~\cite{chen2021syntheticdata}
+
+A recurrent temporal encoder $\tau(\cdot)$, instantiated as a bidirectional long short-term memory network with hidden dimension $d_h$ per direction, models the dynamics of the fused sequence.
+Temporal attention then aggregates the resulting states into a single video representation,
+
+\begin{align}
+z_t &= \tau\!\left(f_t \mid \{f_k\}_{k=1}^{T}\right)\in\mathbb{R}^{2d_h}, \\
+a_t &= \frac{\exp(w^\top z_t)}{\sum_{k=1}^{T}\exp(w^\top z_k)}, \\
+p &= \sum_{t=1}^{T} a_t z_t,
+\end{align}
+
+where $w\in\mathbb{R}^{2d_h}$ is a learnable attention vector shared across time steps.
+The pooled representation is concatenated with the demographic embedding, $u=[p;e]$, and passed through a regression head $\rho(\cdot)$ with sigmoid activation,
+
+\begin{equation}
+\hat{y} = \sigma\!\left(\rho(u)\right)\in[0,1],
+\qquad
+\widehat{\mathrm{EF}} = 100\,\hat{y}.
+\end{equation}
+
+{\color{red}Here, $y$ denotes the ground-truth EF value and $\hat{y}$ denotes the
+predicted normalized EF value before rescaling to percentage units.} Training combines supervised regression with a hierarchical contrastive objective.
+The regression loss balances robustness against squared-error optimization,
+
+\begin{equation}
+\mathcal{L}_{\mathrm{EF}} = (1-w_{\mathrm{r}})\,\mathcal{L}_{\delta}(\hat{y},y) + w_{\mathrm{r}}\,\lVert \hat{y}-y \rVert_2^2,
+\end{equation}
+
+where $\mathcal{L}_{\delta}$ denotes the Huber loss and $w_{\mathrm{r}}\in[0,1]$ sets the balance between the two terms.
+The contrastive objective operates on the projected video embedding and proceeds in two stages.
+The first stage, $\mathcal{L}_{\mathrm{H1}}$, treats samples sharing an EF-derived task label as positives, following supervised contrastive learning.\cite{khosla2020supcon}
+The second stage, $\mathcal{L}_{\mathrm{H2}}$, refines the representation by treating samples sharing a demographic subgroup as positives within each EF group, which counteracts the concentration of pediatric labels in the normal range.\cite{reddy2023echonetpeds}
+The combined auxiliary loss is
+
+\begin{equation}
+\mathcal{L}_{\mathrm{HCL}} = \mathcal{L}_{\mathrm{H1}} + \lambda_{\mathrm{H2}}(\epsilon)\,\mathcal{L}_{\mathrm{H2}},
+\end{equation}
+
+where $\lambda_{\mathrm{H2}}(\epsilon)$ increases with epoch $\epsilon$, so that EF structure forms before subgroup structure is imposed.
+The overall objective is
+
+\begin{equation}
+\mathcal{L} = \mathcal{L}_{\mathrm{EF}} + \alpha\,\mathcal{L}_{\mathrm{HCL}},
+\end{equation}
+
+{\color{blue}with $\alpha$ controlling the contribution of the auxiliary term.} {\color{red}where $\alpha$ controls the contribution of the hierarchical contrastive
+objective, $L_{\mathrm{EF}}$ is the supervised regression loss,
+$L_{\delta}$ is the Huber loss, $L_{\mathrm{H1}}$ is the EF-based
+supervised contrastive loss, and $L_{\mathrm{H2}}$ is the demographic
+hierarchical contrastive loss. The parameter $\lambda_{\mathrm{H2}}$
+controls the contribution of the second contrastive stage and varies with
+training epoch $\epsilon$.} The model is optimized with AdamW under cosine learning-rate scheduling.
+
+\subsection{Benchmark and implementation}
+
+We evaluate on EchoNet-Pediatric, which comprises 7,643 apical four-chamber and parasternal short-axis clips drawn from 4,467 studies across 1,958 patients aged 0 to 18 years.\cite{reddy2023echonetpeds}
+As a benchmark reference we train a video-only regression model that shares the frame encoder, temporal encoder, attention module, and regression head of \textsc{EchoStature}.
+The two models do not receive the same input.
+The reference model observes the echocardiographic clip alone, whereas \textsc{EchoStature} additionally observes the demographic vector and the synthetic clip rendered from it.
+The comparison therefore quantifies the benefit of supplying demographic context in both scalar and rendered form, and it does not attribute that benefit to either form individually.
+{\color{blue}Both models train under identical optimization settings, augmentation, and schedules, so the difference in performance reflects the additional inputs and the components that consume them rather than differences in training procedure.}
+{\color{red}Both models use AdamW, learning rate \(3\times 10^{-4}\), a cosine schedule, batch size 8, the same number of epochs, and the same clip-level split. The contrastive weight is 0.04 for the video-only model and 0.025 for \textsc{EchoStature}, and \textsc{EchoStature} adds the gating network, so this comparison is not a single-component ablation.}
+
+
+
+% \textbf{Real and synthetic inputs.} \texttt{PTEFNetReal} operates exclusively on real echocardiography clips. 
+% \texttt{PTEFNetFused} additionally receives one demographically matched synthetic reconstruction for each real clip. 
+% Synthetic counterparts share the same EF label and demographic attributes as their corresponding real clips and are incorporated only through the auxiliary fusion stream rather than being used independently during inference.\color{black}
+
+\begin{table}[t]
+\tbl{Summary statistics of the EchoNet-Pediatric cohort.}
+{
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Characteristic} & \textbf{Train} & \textbf{Validation} \\
+\colrule
+Number of clips & 6,227 & 1,558 \\
+EF (\%, mean $\pm$ SD) & $61.1 \pm 10.5$ & $61.4 \pm 9.7$ \\
+Sex (F/M/O) & 2661 / 3561 / 5 & 653 / 905 / 0 \\
+View (A4C/PSAX) & 2657 / 3570 & 613 / 945 \\
+\botrule
+\end{tabular}
+}
+\begin{center}
+\footnotesize
+F: female; M: male; O: other; A4C: apical four-chamber; PSAX: parasternal short-axis.
+\end{center}
+\label{tab:dataset_summary}
+\end{table}
+
+
+
+\section{Experiments and results}
+
+\subsection{Dataset and experimental setup}
+
+We evaluate on EchoNet-Pediatric, predicting left ventricular ejection fraction from pediatric echocardiography videos.\cite{reddy2023echonetpeds}
+Each sample comprises a processed grayscale clip acquired in the apical four-chamber (A4C) or parasternal short-axis (PSAX) view, together with the corresponding EF, sex, age band (0--1, 2--5, 6--10, 11--15, and 16--18 years), and BMI category.
+BMI categories are derived from fixed body-mass-index thresholds rather than age- and sex-specific pediatric percentiles, since percentile references are undefined below two years of age and the cohort spans patients from birth.
+The resulting categories stratify patients by raw body mass index and do not correspond to clinical weight-status definitions.
+{\color{red}After preprocessing and quality filtering, the cohort contains 7,785
+labeled clips, partitioned at the clip level into 6,227 training and 1,558
+validation clips. The validation set is an internal validation set rather
+than an external cohort. Because the partition is performed at the clip
+level, multiple clips from the same patient may potentially occur across
+the training and validation sets. Therefore, the reported validation
+results should not be interpreted as evidence of patient-disjoint
+generalization.}
+Table~\ref{tab:dataset_summary} summarizes the partitions, and all reported results are obtained on the validation set.
+Each clip is resized to $128 \times 128$ pixels, uniformly sampled to $T=32$ frames, and normalized to $[0,1]$.
+{\color{blue}\textsc{EchoStature} additionally receives one demographically rendered synthetic clip per real clip, sharing the EF label and demographic attributes of its counterpart} {\color{red}\textsc{EchoStature} additionally receives one demographically rendered synthetic
+clip for each real clip. The synthetic clip is paired with its real
+counterpart and shares the counterpart's EF label and demographic
+attributes; it is therefore treated as demographic-conditioned visual
+context rather than as an independently labeled clinical observation}, while the video-only reference model observes the echocardiographic clip alone. {\color{red}Each paired clip was compared with its source clip by structural similarity and peak signal-to-noise ratio. Across the 7,785 clips used for training and validation, mean structural similarity is 0.995 and mean peak signal-to-noise ratio is 49.0~dB. This comparison measures agreement with the source when the generator receives that source and its own demographic vector. It does not test whether a different demographic vector would change the clip, and it does not establish clinical realism or clinical validity.}
+
+\subsection{Overall performance}
+
+Table~\ref{tab:main_results} reports regression performance on the validation set.
+{\color{blue}\textsc{EchoStature} reduces MAE from 4.52 to 4.40, RMSE from 6.18 to 6.09, and raises $R^2$ from 0.586 to 0.598 relative to the reference model.} {\color{red}\textsc{EchoStature} achieves a lower validation MAE of 4.40 compared with 4.52
+for the video-only reference model. RMSE decreases from 6.18 to 6.09 and
+$R^2$ increases from 0.586 to 0.598 in the present experiment.}
+Results reflect a single training run, so these margins should be interpreted with corresponding caution.
+The subgroup analysis that follows establishes that this margin is small relative to the variation across patient populations.
+
+\subsection{Subgroup performance}
+
+Table~\ref{tab:subgroup_results} reports MAE across sex, age, and body-mass subgroups, and the variation it reveals exceeds every architectural effect measured in this work.
+Infants aged 0--1 years reach 5.23 MAE against 3.90 for the 2--5 year group.
+That difference of 1.33 percentage points is more than ten times the 0.12 margin separating \textsc{EchoStature} from the video-only reference model.
+Where a patient falls in the pediatric age range therefore affects expected error far more than which model estimates it.
+
+{\color{blue}The gap follows from the physiology of infancy rather than from any property of the architecture. Infant heart rates approach twice those of adolescents, so a fixed 32-frame sample spans proportionally fewer complete cardiac cycles. Smaller chamber dimensions occupy fewer pixels at fixed input resolution. Both effects reduce the evidence available to the encoder precisely where anatomical variation across patients is greatest, and both would apply to any fixed-length, fixed-resolution video model.}
+{\color{red}The observed performance gap may reflect characteristics of infant
+echocardiography, including differences in heart rate, chamber size, and
+the amount of anatomical information represented at the fixed spatial and
+temporal resolution used in this study. For example, higher infant heart
+rates could cause a fixed 32-frame sample to represent a different portion
+of the cardiac cycle than in older patients, while smaller chamber
+dimensions could occupy fewer pixels at the fixed input resolution. These
+factors are plausible explanations for the observed subgroup difference,
+but their individual contributions were not directly tested in the present
+analysis.}
+
+Differences across sex and body-mass strata are smaller but consistent in direction.
+Female patients reach 4.20 MAE against 4.54 for male patients, and the lowest body-mass stratum reaches 4.24 against 5.30 for the third stratum.
+Subgroup counts are unequal, so per-subgroup estimates carry correspondingly different precision, and the smaller strata warrant cautious interpretation.
+
+The practical implication is that pooled accuracy misrepresents pediatric performance.
+A model reported at 4.40 MAE performs at 5.23 for the youngest patients, who are also those for whom echocardiography is most often the only available assessment of ventricular function.\cite{reddy2023echonetpeds}
+Reporting a single pooled figure conceals this variation entirely, and it conceals it for the subgroup least able to tolerate error.
+Pediatric EF regression therefore warrants subgroup-stratified reporting as standard practice, independently of the architecture under evaluation.
+
+\subsection{Ablation studies}
+
+\paragraph{Gated fusion.}
+Table~\ref{tab:component_ablation} compares variants trained under a matched 100-epoch budget without the contrastive objective. {\color{red}The three rows share that 100-epoch budget, AdamW, learning rate \(3\times 10^{-4}\), a cosine schedule, batch size 8, the same clip-level split, and a contrastive weight of zero. The real-only and rendered-only rows use the same video-only network and differ in which clips are supplied. The real-plus-rendered row uses the \textsc{EchoStature} network, including the gate, so it is not an architecture-matched test of the gate alone.}
+Under this controlled setting, adding the gated synthetic stream reduces MAE from 4.45 to 4.34 and raises $R^2$ from 0.604 to 0.617, reproducing the direction of the improvement observed in Table~\ref{tab:main_results}.
+A variant receiving only the synthetic stream reaches 4.80 MAE and $R^2$ of 0.516, indicating that the rendered clips retain EF-relevant structure while remaining inferior to real acquisitions.
+
+\paragraph{\color{black}Contrastive objective.}
+{\color{blue}The ablation variants use a shorter optimization schedule than the models in Table~\ref{tab:main_results}, so the contribution of the hierarchical contrastive objective cannot be separated from the schedule under the present experiments.
+We therefore report it as part of the full training configuration rather than as an independently validated component.}
+{\color{red}Under the 100-epoch budget of Table~\ref{tab:component_ablation}, \textsc{EchoStature} without the hierarchical contrastive objective reaches 4.34 MAE, 5.94 RMSE, and $R^2$ of 0.617, compared with 4.40, 6.09, and 0.598 for the full-schedule model that includes the objective (Table~\ref{tab:main_results}). The video-only model reaches 4.45, 6.05, and 0.604 without the objective, compared with 4.52, 6.18, and 0.586 with it. The epoch budget is not matched, so these differences do not isolate the contrastive term. The objective remains part of the full training configuration, and its contribution is not independently established.}
+
+\paragraph{Demographics-only control.}
+Replacing the learned video representation entering the regression head with zeros, while retaining the demographic embedding, degrades performance substantially: MAE rises from 4.52 to 7.61 for the reference model and from 4.40 to 10.69 for \textsc{EchoStature}. {\color{red}This control does not retrain either model. At inference, the pooled video vector is set to zero and the demographic embedding is left unchanged.}
+Both models therefore rely predominantly on cardiac video rather than on demographic metadata.
+
+\paragraph{Demographic conditioning.}
+Table~\ref{tab:demo_conditioning_ablation} reports inference-time perturbation of the demographic vector with the video inputs held fixed.
+Zeroing or permuting the vector increases MAE by at most 0.06 percentage points.
+This perturbation affects only the scalar demographic pathway, since the synthetic clip is rendered before inference and is unchanged by the manipulation, so the result bounds the contribution of the post-pooling embedding rather than that of the rendered stream.
+
+\subsection{Model interpretation}
+
+\paragraph{Representation structure.}
+Figure~\ref{fig:embeddings} presents UMAP projections of the regressor input representation, colored by sex, age bin, and body-mass stratum.
+Partial separation is visible for sex and age bin.
+Body-mass strata are not visually resolved in this projection, which is consistent with the coarse threshold-based encoding described in Section~5.1.
+We present these projections as a qualitative description rather than as evidence of a learned effect, since demographic attributes are partly inferable from echocardiograms directly\cite{ghorbani2020interpretation} and since UMAP geometry depends on the chosen neighborhood parameters.
+
+\paragraph{Attribution.}
+Figure~\ref{fig:gradcam_compare} compares Grad-CAM maps from the reference model and \textsc{EchoStature} on subgroup-matched validation clips.
+Both models attribute to regions overlapping the ventricular cavity, and the maps remain spatially broad for both.
+We therefore treat these maps as a check that attribution falls within the imaging sector and over cardiac structures rather than as a discriminative comparison between the two models.\cite{adebayo2018sanity}
+
+\paragraph{Counterfactual stability.}
+Figure~\ref{fig:counterfactual_grid} reports predictions under controlled perturbation of sex, age bin, and BMI category with the echocardiographic video held fixed.
+Predicted EF shifts only marginally across all three perturbations, consistent with the aggregate result in Table~\ref{tab:demo_conditioning_ablation}.
+Attribution maps nonetheless change under the same perturbations, indicating that demographic metadata influences the spatial evidence the model weights without appreciably altering the resulting estimate.
+\begin{table*}[t]
+\centering
+\begin{minipage}[t]{0.43\textwidth}
+\vspace{0pt}
+\centering
+\tbl{Overall EF regression performance on the validation set.}
+{
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Model} & \textbf{MAE}$\downarrow$ & \textbf{RMSE}$\downarrow$ & $\mathbf{R^2}\uparrow$ \\
+\colrule
+Video-only  & 4.52 & 6.18 & 0.586 \\
+\textsc{EchoStature} & \textbf{4.40} & \textbf{6.09} & \textbf{0.598} \\
+\botrule
+\end{tabular}
+}
+\label{tab:main_results}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}[t]{0.53\textwidth}
+\vspace{0pt}
+\centering
+\tbl{Input ablation under a matched 100-epoch schedule without the contrastive objective. }
+{
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Input streams} & \textbf{Fusion} & \textbf{MAE}$\downarrow$ & \textbf{RMSE}$\downarrow$ & $\mathbf{R^2}\uparrow$ \\
+\colrule
+Real $+$ rendered & \checkmark & \textbf{4.34} & \textbf{5.94} & \textbf{0.617} \\
+Real only & --- & 4.45 & 6.05 & 0.604 \\
+Rendered only & --- & 4.80 & 6.72 & 0.516 \\
+\botrule
+\end{tabular}
+}
+\label{tab:component_ablation}
+\end{minipage}
+\end{table*}
+
+% \begin{table*}[t]
+% \centering
+
+% \begin{minipage}[t]{0.43\textwidth}
+% \vspace{0pt}
+% \centering
+% \caption{Overall EF regression performance on the validation set.}
+% \label{tab:main_results}
+% \small
+% \renewcommand{\arraystretch}{1.05}
+
+% \resizebox{\linewidth}{!}{%
+% \begin{tabular}{lcccc}
+% \toprule
+% \textbf{Model} &
+% \textbf{MAE}$\downarrow$ &
+% \textbf{MSE}$\downarrow$ &
+% \textbf{RMSE}$\downarrow$ &
+% $\mathbf{R^2}\uparrow$ \\
+% \colrule
+% \texttt{PTEFNetReal}
+% & 4.52 & 38.24 & 6.18 & 0.586 \\
+% \textbf{\texttt{PTEFNetFused}}
+% & \textbf{4.40} & \textbf{37.08} & \textbf{6.09} & \textbf{0.598} \\
+% \botrule
+% \end{tabular}%
+% }
+% \end{minipage}
+% \hspace{0.02\textwidth}
+% \begin{minipage}[t]{0.53\textwidth}
+% \vspace{0pt}
+% \centering
+% \caption{Component ablation. Variants marked $\dagger$ use a 100-epoch training schedule.}
+% \label{tab:component_ablation}
+% \small
+% \renewcommand{\arraystretch}{1.05}
+
+% \resizebox{\linewidth}{!}{%
+% \begin{tabular}{lccccc}
+% \toprule
+% \textbf{Model} &
+% \textbf{HCL} &
+% \textbf{Fusion} &
+% \textbf{MAE}$\downarrow$ &
+% \textbf{RMSE}$\downarrow$ &
+% $\mathbf{R^2}\uparrow$ \\
+% \colrule
+% Fused, no HCL$\dagger$
+% & --- & \checkmark & 4.34 & 5.94 & 0.617 \\
+% Real, no HCL$\dagger$
+% & --- & --- & 4.45 & 6.05 & 0.604 \\
+% Synthetic-only$\dagger$
+% & --- & --- & 4.80 & 6.72 & 0.516 \\
+% \botrule
+% \end{tabular}%
+% }
+% \end{minipage}
+
+% \end{table*}
+
+
+
+
+\begin{figure*}[!ht]
+\centering
+
+\begin{subfigure}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/UMAP_-_SEX_head_input.png}
+    \caption{Sex}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/UMAP_-_AGE_head_input.png}
+    \caption{Age bin}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/UMAP_-_BMI_head_input.png}
+    \caption{BMI category}
+\end{subfigure}
+
+\caption{UMAP projections of the learned regressor input representation, colored by (a) sex, (b) age bin, and (c) body-mass stratum. Partial separation is visible for sex and age bin.}
+\label{fig:embeddings}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+
+\begin{subfigure}[t]{0.495\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{images/real_vs_fused_gradcam_comparison.png}
+\caption{Grad-CAM comparison.}
+\label{fig:gradcam_compare}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{images/fused_counterfactual_all_features.png}
+\caption{Counterfactual analysis.}
+\label{fig:counterfactual_grid}
+\end{subfigure}
+
+\vspace{-1mm}
+
+
+\caption{
+Interpretability analyses.
+(a) Grad-CAM attribution maps from the video-only reference model and \textsc{EchoStature} on subgroup-matched validation clips.
+(b) Predictions and attributions under controlled perturbation of sex, age bin, and BMI category with the echocardiographic video held fixed.
+}
+
+\label{fig:interpretability}
+\end{figure*}
+
+\begin{table*}[t]
+
+\begin{minipage}[t]{0.46\textwidth}
+
+\caption{Subgroup performance for \texttt{EchoStature} on the validation set.}
+\label{tab:subgroup_results}
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Subgroup} &
+\textbf{MAE}$\downarrow$ &
+\textbf{Count}\\
+\midrule
+Sex: male & 4.54 & 905\\
+Sex: female & 4.20 & 653\\
+Age: 0--1 & 5.23 & 132\\
+Age: 2--5 & 3.90 & 220\\
+BMI: underweight & 4.24 & 749\\
+BMI: overweight & 5.30 & 159\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.51\textwidth}
+\centering
+\caption{Demographic conditioning ablation for \texttt{EchoStature}.}
+\label{tab:demo_conditioning_ablation}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Mode} &
+\textbf{MAE}$\downarrow$ &
+\textbf{MSE}$\downarrow$ &
+\textbf{RMSE}$\downarrow$ &
+$\mathbf{R^2}\uparrow$\\
+\midrule
+Normal & 4.40 & 37.08 & 6.09 & 0.598\\
+Zero & 4.45 & 38.57 & 6.21 & 0.582\\
+Shuffle & 4.41 & 37.37 & 6.11 & 0.595\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table*}
+
+\section{Discussion}
+
+The dominant source of error variation in pediatric EF regression is the patient, not the architecture.
+The difference between the best and worst age subgroups in our experiments exceeds the difference between the two models by more than an order of magnitude, and infants incur the highest error of any subgroup.
+Architectural comparison on pooled metrics therefore optimizes a quantity that obscures the failure mode most relevant to deployment, since a model deployed across a pediatric service encounters the full age range and performs measurably worse at one end of it.
+We report subgroup-stratified error for every configuration in this work and recommend the practice generally.
+
+Gated fusion of the rendered stream yields a consistent but modest improvement.
+Under a matched training budget, adding the synthetic stream reduces MAE from 4.45 to 4.34, and the direction of the effect persists under the full schedule.
+A model receiving only the rendered clips reaches 4.80 MAE, indicating that they retain EF-relevant structure while remaining inferior to real acquisitions.
+The convex gate therefore functions as intended, admitting complementary information without treating rendered video as a substitute for real echocardiography.
+The margin is small and derives from a single training run, so it warrants replication across seeds before it can be regarded as established.
+
+Demographic attributes contribute auxiliary context rather than dominant signal.
+Zeroing the video representation while retaining the demographic embedding raises MAE from 4.40 to 10.69, and perturbing the demographic vector at inference changes MAE by at most 0.06 percentage points.
+Predictions consequently remain stable under controlled demographic perturbation, indicating that the model does not substitute metadata for visual evidence of ventricular mechanics.
+Attribution maps nonetheless shift under the same perturbations, so demographic context influences which spatial evidence the model weights without appreciably altering the resulting estimate.
+This dissociation between attribution sensitivity and prediction stability merits closer study, since attribution alone would suggest a stronger demographic dependence than the predictions exhibit.
+
+Several limitations constrain these conclusions.
+Evaluation uses a fixed clip-level partition that does not guarantee patient-disjoint generalization, and model selection uses the same validation set.
+Results derive from a single training run on a single cohort, so margins between configurations lack variance estimates and generalization across acquisition protocols remains untested.
+The comparison contrasts demographic-aware gated fusion against video-only regression, and it therefore does not isolate the contribution of the rendered stream from that of the demographic embedding.
+{\color{blue}The contrastive objective was trained only within the full configuration, so its contribution likewise remains unverified.}
+{\color{red}A configuration without the contrastive objective was trained, but under a shorter schedule than the full model, so the contribution of that objective remains unisolated.}
+BMI categories rely on fixed thresholds rather than pediatric percentiles, which limits the granularity of body-size conditioning, and a percentile-based or continuous body-surface-area encoding would likely provide a stronger signal.\cite{lopez2017zscores}
+Grad-CAM and counterfactual analyses probe behavior without establishing clinical reliability, and expert evaluation and uncertainty estimation remain necessary.
+
+The most consequential direction is to reduce error where it is largest.
+{\color{blue}The infant gap follows from fixed-length, fixed-resolution encoding applied to a population with high heart rates and small chambers, so adaptive temporal sampling or resolution scaled to body size may prove more effective than further architectural refinement of the fusion mechanism.}
+{\color{red}The higher infant error may be related to fixed-length, fixed-resolution encoding applied to a population with high heart rates and small chambers, but those mechanisms were not directly tested. Adaptive temporal sampling or resolution scaled to body size is therefore a hypothesis for later experiments, rather than an established remedy.}
+Whether accuracy and demographic independence trade off in pediatric EF regression is a second open question, and answering it requires perturbation analyses applied across architectures rather than to a single model.
+
+
+\section{Conclusion}
+
+We presented \textsc{EchoStature}, a pediatric EF regression model that renders demographic attributes into a synthetic echocardiographic clip and fuses it with the real acquisition through a learned gate.
+The model improves EF regression over a video-only reference and remains stable under controlled demographic perturbation.
+Subgroup-stratified evaluation reveals larger variation across pediatric age groups than between architectures, with infants incurring the highest error.
+Pediatric EF regression therefore warrants subgroup-stratified reporting as standard practice, since pooled accuracy conceals precisely the population for which echocardiography is most often the only available assessment of ventricular function.
+\newpage
+\bibliographystyle{ws-procs11x85}
+\bibliography{ws-pro-sample}
+\end{document}
